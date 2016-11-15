@@ -46,14 +46,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\FrmAddAuctin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\FrmAddAuctin.Designer.cs">
+      <DependentUpon>FrmAddAuctin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmAddBid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddBid.Designer.cs">
+      <DependentUpon>FrmAddBid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddCustomer.Designer.cs">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddProduct.Designer.cs">
+      <DependentUpon>FrmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AuctionNet .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuctionNet .Designer.cs">
+      <DependentUpon>AuctionNet .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddSupplier.Designer.cs">
+      <DependentUpon>FrmAddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IAddAuction.cs" />
+    <Compile Include="Interfaces\IAddCustomer.cs" />
+    <Compile Include="Interfaces\IAddProduct.cs" />
+    <Compile Include="Interfaces\IAddBid.cs" />
+    <Compile Include="Interfaces\IAddSupplier.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmAddAuctin.resx">
+      <DependentUpon>FrmAddAuctin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddBid.resx">
+      <DependentUpon>FrmAddBid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddCustomer.resx">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddProduct.resx">
+      <DependentUpon>FrmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AuctionNet .resx">
+      <DependentUpon>AuctionNet .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddSupplier.resx">
+      <DependentUpon>FrmAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
