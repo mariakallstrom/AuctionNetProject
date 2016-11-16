@@ -33,8 +33,6 @@
             this.txtSupplierTelephone = new System.Windows.Forms.TextBox();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.btnAddSupplier = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSupplierIdBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblName
@@ -81,30 +79,11 @@
             this.btnAddSupplier.Text = "Spara Leverantör";
             this.btnAddSupplier.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Supplier Id";
-            // 
-            // txtSupplierIdBox
-            // 
-            this.txtSupplierIdBox.Location = new System.Drawing.Point(27, 48);
-            this.txtSupplierIdBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSupplierIdBox.Name = "txtSupplierIdBox";
-            this.txtSupplierIdBox.Size = new System.Drawing.Size(112, 26);
-            this.txtSupplierIdBox.TabIndex = 6;
-            // 
             // FrmAddSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 271);
-            this.Controls.Add(this.txtSupplierIdBox);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddSupplier);
             this.Controls.Add(this.txtSupplierTelephone);
             this.Controls.Add(this.lblTelephone);
@@ -127,7 +106,5 @@
         private System.Windows.Forms.TextBox txtSupplierTelephone;
         private System.Windows.Forms.Label lblTelephone;
         private System.Windows.Forms.Button btnAddSupplier;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSupplierIdBox;
     }
 }

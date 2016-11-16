@@ -8,13 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AuctionNet.Controllers;
 
 namespace AuctionNet.Forms
 {
     public partial class FrmAddAuction : Form
     {
+        private readonly IAuctionController _auctionController;
         public FrmAddAuction()
         {
+            _auctionController=new AuctionController();
             InitializeComponent();
             FormAddAuc = this;
 
@@ -25,5 +28,7 @@ namespace AuctionNet.Forms
         {
 
         }
+
+    
     }
 }

@@ -1,11 +1,8 @@
-namespace AuctionNet
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+using System;
+using System.Collections.Generic;
 
+namespace AuctionNet.Models
+{
     public partial class Auctions
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -27,6 +24,8 @@ namespace AuctionNet
         public virtual Products Products { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Bids> Bids { get; set; }
+
+
+        public virtual ICollection<Bids> Bids{ get; set; }
     }
 }
