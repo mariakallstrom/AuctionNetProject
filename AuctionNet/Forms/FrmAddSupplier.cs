@@ -38,7 +38,7 @@ namespace AuctionNet.Forms
             {
                 var result = _supplierController.Create(new Suppliers
                 {
-                    Id = Convert.ToInt32(txtSupplierIdBox.Text),
+                  
                     Name = Convert.ToString(txtSupplierName),
                     Phone = Convert.ToString(txtSupplierTelephone)
                 });
