@@ -23,14 +23,9 @@ namespace AuctionNet.Forms
             InitializeComponent();
         }
 
-        public void SaveProduct()
+        private void FrmAddSupplier_Load(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-        }
 
-        public void ValidateInput()
-        {
-            throw new NotImplementedException();
         }
 
         private void btnAddSupplier_Click(object sender, EventArgs e)

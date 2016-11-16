@@ -1,6 +1,6 @@
 ﻿namespace AuctionNet.Forms
 {
-    partial class FrmAddAuctin
+    partial class FrmAddAuction
     {
         /// <summary>
         /// Required designer variable.
@@ -30,123 +30,113 @@
         {
             this.lblStartTime = new System.Windows.Forms.Label();
             this.txtStartTime = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEndtime = new System.Windows.Forms.TextBox();
             this.lblEndTime = new System.Windows.Forms.Label();
             this.txtAcceptPrice = new System.Windows.Forms.TextBox();
             this.lblAcceptPrice = new System.Windows.Forms.Label();
             this.txtProductId = new System.Windows.Forms.TextBox();
             this.lblProductId = new System.Windows.Forms.Label();
             this.btnAddAuction = new System.Windows.Forms.Button();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.btnUploadImage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblStartTime
             // 
             this.lblStartTime.AutoSize = true;
-            this.lblStartTime.Location = new System.Drawing.Point(23, 26);
+            this.lblStartTime.Location = new System.Drawing.Point(26, 32);
             this.lblStartTime.Name = "lblStartTime";
-            this.lblStartTime.Size = new System.Drawing.Size(53, 17);
+            this.lblStartTime.Size = new System.Drawing.Size(61, 20);
             this.lblStartTime.TabIndex = 0;
             this.lblStartTime.Text = "Starttid";
             // 
             // txtStartTime
             // 
-            this.txtStartTime.Location = new System.Drawing.Point(26, 60);
+            this.txtStartTime.Location = new System.Drawing.Point(29, 75);
+            this.txtStartTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStartTime.Name = "txtStartTime";
-            this.txtStartTime.Size = new System.Drawing.Size(161, 22);
+            this.txtStartTime.Size = new System.Drawing.Size(181, 26);
             this.txtStartTime.TabIndex = 1;
             // 
-            // textBox1
+            // txtEndtime
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 142);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 22);
-            this.textBox1.TabIndex = 3;
+            this.txtEndtime.Location = new System.Drawing.Point(29, 178);
+            this.txtEndtime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEndtime.Name = "txtEndtime";
+            this.txtEndtime.Size = new System.Drawing.Size(181, 26);
+            this.txtEndtime.TabIndex = 3;
             // 
             // lblEndTime
             // 
             this.lblEndTime.AutoSize = true;
-            this.lblEndTime.Location = new System.Drawing.Point(23, 108);
+            this.lblEndTime.Location = new System.Drawing.Point(26, 135);
             this.lblEndTime.Name = "lblEndTime";
-            this.lblEndTime.Size = new System.Drawing.Size(47, 17);
+            this.lblEndTime.Size = new System.Drawing.Size(54, 20);
             this.lblEndTime.TabIndex = 2;
             this.lblEndTime.Text = "Sluttid";
             // 
             // txtAcceptPrice
             // 
-            this.txtAcceptPrice.Location = new System.Drawing.Point(246, 60);
+            this.txtAcceptPrice.Location = new System.Drawing.Point(277, 75);
+            this.txtAcceptPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAcceptPrice.Name = "txtAcceptPrice";
-            this.txtAcceptPrice.Size = new System.Drawing.Size(109, 22);
+            this.txtAcceptPrice.Size = new System.Drawing.Size(122, 26);
             this.txtAcceptPrice.TabIndex = 5;
             // 
             // lblAcceptPrice
             // 
             this.lblAcceptPrice.AutoSize = true;
-            this.lblAcceptPrice.Location = new System.Drawing.Point(243, 26);
+            this.lblAcceptPrice.Location = new System.Drawing.Point(273, 32);
             this.lblAcceptPrice.Name = "lblAcceptPrice";
-            this.lblAcceptPrice.Size = new System.Drawing.Size(74, 17);
+            this.lblAcceptPrice.Size = new System.Drawing.Size(84, 20);
             this.lblAcceptPrice.TabIndex = 4;
             this.lblAcceptPrice.Text = "Acceptpris";
             // 
             // txtProductId
             // 
-            this.txtProductId.Location = new System.Drawing.Point(246, 142);
+            this.txtProductId.Location = new System.Drawing.Point(277, 178);
+            this.txtProductId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductId.Name = "txtProductId";
-            this.txtProductId.Size = new System.Drawing.Size(109, 22);
+            this.txtProductId.Size = new System.Drawing.Size(122, 26);
             this.txtProductId.TabIndex = 7;
             // 
             // lblProductId
             // 
             this.lblProductId.AutoSize = true;
-            this.lblProductId.Location = new System.Drawing.Point(243, 108);
+            this.lblProductId.Location = new System.Drawing.Point(273, 135);
             this.lblProductId.Name = "lblProductId";
-            this.lblProductId.Size = new System.Drawing.Size(68, 17);
+            this.lblProductId.Size = new System.Drawing.Size(78, 20);
             this.lblProductId.TabIndex = 6;
             this.lblProductId.Text = "ProduktId";
             // 
             // btnAddAuction
             // 
             this.btnAddAuction.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.btnAddAuction.Location = new System.Drawing.Point(246, 209);
+            this.btnAddAuction.Location = new System.Drawing.Point(29, 259);
+            this.btnAddAuction.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddAuction.Name = "btnAddAuction";
-            this.btnAddAuction.Size = new System.Drawing.Size(132, 45);
+            this.btnAddAuction.Size = new System.Drawing.Size(148, 56);
             this.btnAddAuction.TabIndex = 8;
             this.btnAddAuction.Text = "Spara Auktion";
             this.btnAddAuction.UseVisualStyleBackColor = true;
             // 
-            // openFileDialog
+            // FrmAddAuction
             // 
-            this.openFileDialog.FileName = "openFileDialog1";
-            // 
-            // btnUploadImage
-            // 
-            this.btnUploadImage.Location = new System.Drawing.Point(26, 209);
-            this.btnUploadImage.Name = "btnUploadImage";
-            this.btnUploadImage.Size = new System.Drawing.Size(161, 45);
-            this.btnUploadImage.TabIndex = 9;
-            this.btnUploadImage.Text = "Ladda upp bild";
-            this.btnUploadImage.UseVisualStyleBackColor = true;
-            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
-            // 
-            // FrmAddAuctin
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 282);
-            this.Controls.Add(this.btnUploadImage);
+            this.ClientSize = new System.Drawing.Size(505, 401);
             this.Controls.Add(this.btnAddAuction);
             this.Controls.Add(this.txtProductId);
             this.Controls.Add(this.lblProductId);
             this.Controls.Add(this.txtAcceptPrice);
             this.Controls.Add(this.lblAcceptPrice);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEndtime);
             this.Controls.Add(this.lblEndTime);
             this.Controls.Add(this.txtStartTime);
             this.Controls.Add(this.lblStartTime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FrmAddAuctin";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FrmAddAuction";
             this.Text = "Lägg till Auktion";
+            this.Load += new System.EventHandler(this.FrmAddAuction_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,15 +145,13 @@
         #endregion
 
         private System.Windows.Forms.Label lblStartTime;
-        private System.Windows.Forms.TextBox txtStartTime;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblEndTime;
-        private System.Windows.Forms.TextBox txtAcceptPrice;
         private System.Windows.Forms.Label lblAcceptPrice;
-        private System.Windows.Forms.TextBox txtProductId;
         private System.Windows.Forms.Label lblProductId;
         private System.Windows.Forms.Button btnAddAuction;
-        private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.Button btnUploadImage;
+        public System.Windows.Forms.TextBox txtStartTime;
+        public System.Windows.Forms.TextBox txtEndtime;
+        public System.Windows.Forms.TextBox txtAcceptPrice;
+        public System.Windows.Forms.TextBox txtProductId;
     }
 }
