@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace AuctionNet.Interfaces
 {
-    interface IAddBid
+    interface ISupplierController
     {
-        DateTime Date { get; set; }
-        int Bid { get; set; }
-        int CustomerId { get; set; }
-        int AuctionId { get; set; }
-
         void ValidateInput();
-        void SaveProduct();
+        void AddSupplier();
+
+        
     }
 }
