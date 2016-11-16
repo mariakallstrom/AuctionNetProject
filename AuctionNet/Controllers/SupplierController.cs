@@ -23,6 +23,7 @@ namespace AuctionNet.Controllers
             return _auctionNetModel.Suppliers.ToList();
         }
 
+        //todo lösa error nedan (i if satsen specifikt)
         public List<ValidationResult> Create(Suppliers suppliers)
         {
             ValidationContext context = new ValidationContext(suppliers, null, null);

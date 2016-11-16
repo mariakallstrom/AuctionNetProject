@@ -23,25 +23,25 @@ namespace AuctionNet.Forms
             InitializeComponent();
         }
 
-        public void SaveProduct()
-        {
-            throw new NotImplementedException();
-        }
+        //public void SaveProduct()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public void ValidateInput()
-        {
-            throw new NotImplementedException();
-        }
+        //public void ValidateInput()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         private void btnAddSupplier_Click(object sender, EventArgs e)
         {
             {
                 var result = _supplierController.Create(new Suppliers
                 {
-                    Id = Convert.ToInt32(txtSupplierIdBox.Text),
-                    Name = Convert.ToString(txtSupplierName),
-                    Phone = Convert.ToString(txtSupplierTelephone)
+                    Name = txtSupplierName.Text,
+                    Phone = txtSupplierTelephone.Text
                 });
+                
                 MessageBox.Show("A new supplier has been saved!");
 
                 if (result.Count < 0)
