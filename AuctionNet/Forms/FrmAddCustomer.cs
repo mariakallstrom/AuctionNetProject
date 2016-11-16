@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AuctionNet.Forms
 {
-    public partial class FrmAddCustomer : Form, IAddCustomer
+    public partial class FrmAddCustomer : Form, ICustomerController
     {
         public FrmAddCustomer()
         {

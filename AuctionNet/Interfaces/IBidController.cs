@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace AuctionNet.Interfaces
 {
-    interface IAddSupplier
+    interface IBidController
     {
-        void ValidateInput();
-        void SaveProduct();
+        List<Bids> GetAllBids();
+
+        List<object> GetHighestBidPerAuction();
     }
 }
