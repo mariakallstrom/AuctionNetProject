@@ -91,6 +91,7 @@
             this.btnViewCurrentAuctions.TabIndex = 4;
             this.btnViewCurrentAuctions.Text = "Visa pågående auktioner";
             this.btnViewCurrentAuctions.UseVisualStyleBackColor = true;
+            this.btnViewCurrentAuctions.Click += new System.EventHandler(this.btnViewCurrentAuctions_Click);
             // 
             // btnAddBid
             // 
@@ -112,6 +113,7 @@
             this.btnShowAllCustomers.TabIndex = 6;
             this.btnShowAllCustomers.Text = "Visa alla kunder";
             this.btnShowAllCustomers.UseVisualStyleBackColor = true;
+            this.btnShowAllCustomers.Click += new System.EventHandler(this.btnShowAllCustomers_Click);
             // 
             // btnShowMonthlyCommission
             // 
@@ -122,6 +124,7 @@
             this.btnShowMonthlyCommission.TabIndex = 7;
             this.btnShowMonthlyCommission.Text = "Visa provision per månad";
             this.btnShowMonthlyCommission.UseVisualStyleBackColor = true;
+            this.btnShowMonthlyCommission.Click += new System.EventHandler(this.btnShowMonthlyCommission_Click);
             // 
             // FrmAuctionNetStartPage
             // 
