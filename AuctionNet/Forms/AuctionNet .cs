@@ -1,15 +1,7 @@
-﻿using AuctionNet.Forms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
-namespace AuctionNet
+namespace AuctionNet.Forms
 {
 //Frågan: Vilka auk-oner avslutas under e5 visst datumintervall? Samt vad blir
 //provisionen för varje auk-on inom det intervallet?
@@ -43,7 +35,7 @@ namespace AuctionNet
 
         private void btnAddAuction_Click(object sender, EventArgs e)
         {
-            FrmAddAuctin frmAddAuction = new FrmAddAuctin();
+            FrmAddAuction frmAddAuction = new FrmAddAuction();
             frmAddAuction.Show();
         }
 
@@ -51,6 +43,11 @@ namespace AuctionNet
         {
             FrmAddBid frmAddBid = new FrmAddBid();
             frmAddBid.Show();
+        }
+
+        private void FrmAuctionNetStartPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

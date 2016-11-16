@@ -11,21 +11,8 @@ using System.Windows.Forms;
 
 namespace AuctionNet.Forms
 {
-    public partial class FrmAddProduct : Form, IAuctionController
+    public partial class FrmAddProduct : Form
     {
-        public FrmAddProduct()
-        {
-            InitializeComponent();
-        }
-
-        public void SaveProduct()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ValidateInput()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

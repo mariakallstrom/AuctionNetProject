@@ -11,74 +11,10 @@ using AuctionNet.Interfaces;
 
 namespace AuctionNet.Forms
 {
-    public partial class FrmAddBid : Form, IBidController
+    public partial class FrmAddBid : Form
     {
-        public FrmAddBid()
-        {
-            InitializeComponent();
-        }
+       
 
-        public int AuctionId
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public int Bid
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public int CustomerId
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        //datetime.now
-        public DateTime Date
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public void SaveProduct()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ValidateInput()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
