@@ -8,12 +8,12 @@ namespace AuctionNet.Interfaces
 {
     interface IAuctionController
     {
-        void ValidateInput();
+        
         void SaveAuction();
 
         List<Auctions> GetAllAuctions();
 
-        List<Auctions> GetAuctionsHighestBids();
+        List<object> GetAuctionsHighestBids();
 
         List<Auctions> GetAuctionsesFromDate(DateTime start, DateTime end);
 
