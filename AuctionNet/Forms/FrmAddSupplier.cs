@@ -23,9 +23,14 @@ namespace AuctionNet.Forms
             InitializeComponent();
         }
 
-        private void FrmAddSupplier_Load(object sender, EventArgs e)
+        public void SaveProduct()
         {
+            throw new NotImplementedException();
+        }
 
+        public void ValidateInput()
+        {
+            throw new NotImplementedException();
         }
 
         private void btnAddSupplier_Click(object sender, EventArgs e)
@@ -33,7 +38,7 @@ namespace AuctionNet.Forms
             {
                 var result = _supplierController.Create(new Suppliers
                 {
-
+                  
                     Name = Convert.ToString(txtSupplierName),
                     Phone = Convert.ToString(txtSupplierTelephone)
                 });
@@ -48,4 +53,3 @@ namespace AuctionNet.Forms
         }
     }
 }
-
