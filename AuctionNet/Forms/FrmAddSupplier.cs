@@ -18,6 +18,11 @@ namespace AuctionNet.Forms
             InitializeComponent();
         }
 
+        public void AddSupplier()
+        {
+            throw new NotImplementedException();
+        }
+
         public void SaveProduct()
         {
             throw new NotImplementedException();
