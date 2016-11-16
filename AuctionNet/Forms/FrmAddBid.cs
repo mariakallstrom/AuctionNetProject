@@ -71,6 +71,16 @@ namespace AuctionNet.Forms
             }
         }
 
+        public List<Bids> GetAllBids()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<object> GetHighestBidPerAuction()
+        {
+            throw new NotImplementedException();
+        }
+
         public void SaveProduct()
         {
             throw new NotImplementedException();
