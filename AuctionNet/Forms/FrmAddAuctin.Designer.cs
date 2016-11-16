@@ -37,6 +37,8 @@
             this.txtProductId = new System.Windows.Forms.TextBox();
             this.lblProductId = new System.Windows.Forms.Label();
             this.btnAddAuction = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.btnUploadImage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblStartTime
@@ -106,18 +108,33 @@
             // btnAddAuction
             // 
             this.btnAddAuction.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.btnAddAuction.Location = new System.Drawing.Point(26, 207);
+            this.btnAddAuction.Location = new System.Drawing.Point(246, 209);
             this.btnAddAuction.Name = "btnAddAuction";
             this.btnAddAuction.Size = new System.Drawing.Size(132, 45);
             this.btnAddAuction.TabIndex = 8;
             this.btnAddAuction.Text = "Spara Auktion";
             this.btnAddAuction.UseVisualStyleBackColor = true;
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
+            // btnUploadImage
+            // 
+            this.btnUploadImage.Location = new System.Drawing.Point(26, 209);
+            this.btnUploadImage.Name = "btnUploadImage";
+            this.btnUploadImage.Size = new System.Drawing.Size(161, 45);
+            this.btnUploadImage.TabIndex = 9;
+            this.btnUploadImage.Text = "Ladda upp bild";
+            this.btnUploadImage.UseVisualStyleBackColor = true;
+            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
+            // 
             // FrmAddAuctin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 282);
+            this.Controls.Add(this.btnUploadImage);
             this.Controls.Add(this.btnAddAuction);
             this.Controls.Add(this.txtProductId);
             this.Controls.Add(this.lblProductId);
@@ -146,5 +163,7 @@
         private System.Windows.Forms.TextBox txtProductId;
         private System.Windows.Forms.Label lblProductId;
         private System.Windows.Forms.Button btnAddAuction;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Button btnUploadImage;
     }
 }
