@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +22,7 @@ namespace AuctionNet.Controllers
             return _auctionNetModel.Suppliers.ToList();
         }
 
+        //todo lösa error nedan (i if satsen specifikt)
         public List<ValidationResult> Create(Suppliers suppliers)
         {
             ValidationContext context = new ValidationContext(suppliers, null, null);

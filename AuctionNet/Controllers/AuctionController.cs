@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.VisualStyles;
 using AuctionNet.Forms;
 using AuctionNet.Interfaces;
+using AuctionNet.Models;
 
 namespace AuctionNet.Controllers
 {
@@ -37,17 +41,14 @@ namespace AuctionNet.Controllers
 
         public List<object> GetAuctionsHighestBids()
         {
-            //var auctionHighestBid = GetAllAuctions();
-            //var list = auctionHighestBid.Where(a=>a.Bids = 
-
-           
-            //return new List<object>(auctionHighestBid);
-            return null;
+            var list = _auctionNetModel.MaxBid.Select(x=> x.Id +" "+  x.ProductName +" "+ x.EndTime + " " + x.MaxBid1).ToList();
+            return new List<object>(list);
         }
 
         public List<Auctions> GetAuctionsesFromDate(DateTime start, DateTime end)
         {
             throw new NotImplementedException();
+
         }
 
         public List<object> GetAuctionsViewCommission(DateTime start, DateTime end)

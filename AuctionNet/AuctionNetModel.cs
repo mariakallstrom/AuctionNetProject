@@ -1,3 +1,5 @@
+using AuctionNet.Models;
+
 namespace AuctionNet
 {
     using System;
