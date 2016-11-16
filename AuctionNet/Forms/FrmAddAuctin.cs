@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AuctionNet.Forms
 {
-    public partial class FrmAddAuctin : Form, IProductController
+    public partial class FrmAddAuctin : Form
     {
         public FrmAddAuctin()
         {

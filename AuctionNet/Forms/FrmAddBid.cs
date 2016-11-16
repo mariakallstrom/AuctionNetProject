@@ -11,7 +11,7 @@ using AuctionNet.Interfaces;
 
 namespace AuctionNet.Forms
 {
-    public partial class FrmAddBid : Form, IBidController
+    public partial class FrmAddBid : Form
     {
         public FrmAddBid()
         {

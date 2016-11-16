@@ -44,98 +44,105 @@
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
-            this.lblProductName.Location = new System.Drawing.Point(33, 23);
+            this.lblProductName.Location = new System.Drawing.Point(37, 29);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(92, 17);
+            this.lblProductName.Size = new System.Drawing.Size(104, 20);
             this.lblProductName.TabIndex = 0;
             this.lblProductName.Text = "Produktnamn";
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(36, 58);
+            this.txtProductName.Location = new System.Drawing.Point(40, 72);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(196, 22);
+            this.txtProductName.Size = new System.Drawing.Size(220, 26);
             this.txtProductName.TabIndex = 1;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(36, 144);
+            this.txtDescription.Location = new System.Drawing.Point(40, 180);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(196, 110);
+            this.txtDescription.Size = new System.Drawing.Size(220, 136);
             this.txtDescription.TabIndex = 3;
             // 
             // llDescription
             // 
             this.llDescription.AutoSize = true;
-            this.llDescription.Location = new System.Drawing.Point(33, 109);
+            this.llDescription.Location = new System.Drawing.Point(37, 136);
             this.llDescription.Name = "llDescription";
-            this.llDescription.Size = new System.Drawing.Size(81, 17);
+            this.llDescription.Size = new System.Drawing.Size(90, 20);
             this.llDescription.TabIndex = 2;
             this.llDescription.Text = "Beskrivning";
             // 
             // txtStartPrice
             // 
-            this.txtStartPrice.Location = new System.Drawing.Point(294, 58);
+            this.txtStartPrice.Location = new System.Drawing.Point(331, 72);
+            this.txtStartPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStartPrice.Name = "txtStartPrice";
-            this.txtStartPrice.Size = new System.Drawing.Size(196, 22);
+            this.txtStartPrice.Size = new System.Drawing.Size(220, 26);
             this.txtStartPrice.TabIndex = 5;
             // 
             // lblStartPrice
             // 
             this.lblStartPrice.AutoSize = true;
-            this.lblStartPrice.Location = new System.Drawing.Point(291, 23);
+            this.lblStartPrice.Location = new System.Drawing.Point(327, 29);
             this.lblStartPrice.Name = "lblStartPrice";
-            this.lblStartPrice.Size = new System.Drawing.Size(73, 17);
+            this.lblStartPrice.Size = new System.Drawing.Size(82, 20);
             this.lblStartPrice.TabIndex = 4;
             this.lblStartPrice.Text = "Utropspris";
             // 
             // txtCommission
             // 
-            this.txtCommission.Location = new System.Drawing.Point(294, 144);
+            this.txtCommission.Location = new System.Drawing.Point(331, 180);
+            this.txtCommission.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCommission.Name = "txtCommission";
-            this.txtCommission.Size = new System.Drawing.Size(196, 22);
+            this.txtCommission.Size = new System.Drawing.Size(220, 26);
             this.txtCommission.TabIndex = 7;
             // 
             // lblCommission
             // 
             this.lblCommission.AutoSize = true;
-            this.lblCommission.Location = new System.Drawing.Point(291, 109);
+            this.lblCommission.Location = new System.Drawing.Point(327, 136);
             this.lblCommission.Name = "lblCommission";
-            this.lblCommission.Size = new System.Drawing.Size(66, 17);
+            this.lblCommission.Size = new System.Drawing.Size(72, 20);
             this.lblCommission.TabIndex = 6;
             this.lblCommission.Text = "Provision";
             // 
             // txtSupplier
             // 
-            this.txtSupplier.Location = new System.Drawing.Point(294, 232);
+            this.txtSupplier.Location = new System.Drawing.Point(331, 290);
+            this.txtSupplier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSupplier.Name = "txtSupplier";
-            this.txtSupplier.Size = new System.Drawing.Size(196, 22);
+            this.txtSupplier.Size = new System.Drawing.Size(220, 26);
             this.txtSupplier.TabIndex = 9;
             // 
             // lblSupplier
             // 
             this.lblSupplier.AutoSize = true;
-            this.lblSupplier.Location = new System.Drawing.Point(291, 197);
+            this.lblSupplier.Location = new System.Drawing.Point(327, 246);
             this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(77, 17);
+            this.lblSupplier.Size = new System.Drawing.Size(85, 20);
             this.lblSupplier.TabIndex = 8;
             this.lblSupplier.Text = "Leverantör";
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(36, 288);
+            this.btnAddProduct.Location = new System.Drawing.Point(40, 360);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(122, 48);
+            this.btnAddProduct.Size = new System.Drawing.Size(137, 60);
             this.btnAddProduct.TabIndex = 10;
             this.btnAddProduct.Text = "Spara produkt";
             this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // FrmAddProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 366);
+            this.ClientSize = new System.Drawing.Size(590, 458);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.txtSupplier);
             this.Controls.Add(this.lblSupplier);
@@ -148,8 +155,10 @@
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.lblProductName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmAddProduct";
             this.Text = "Lägg till Produkt";
+            this.Load += new System.EventHandler(this.FrmAddProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AuctionNet.Forms
 {
-    public partial class FrmAddSupplier : Form, ISupplierController
+    public partial class FrmAddSupplier : Form
     {
         public FrmAddSupplier()
         {
