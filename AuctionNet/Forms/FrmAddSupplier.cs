@@ -18,6 +18,9 @@ namespace AuctionNet.Forms
             InitializeComponent();
         }
 
-     
+        private void FrmAddSupplier_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

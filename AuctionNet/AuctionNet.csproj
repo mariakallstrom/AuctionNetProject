@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AuctionController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\SupplierController.cs" />
     <Compile Include="Models\AuctionHistory.cs" />
     <Compile Include="AuctionNetModel.cs" />
     <Compile Include="Models\Auctions.cs" />

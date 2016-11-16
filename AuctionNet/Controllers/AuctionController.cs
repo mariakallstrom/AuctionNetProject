@@ -37,11 +37,12 @@ namespace AuctionNet.Controllers
 
         public List<object> GetAuctionsHighestBids()
         {
-            var auctionHighestBid = GetAllAuctions();
-            var list = auctionHighestBid.Where(a=>a.Bids = 
+            //var auctionHighestBid = GetAllAuctions();
+            //var list = auctionHighestBid.Where(a=>a.Bids = 
 
            
-            return new List<object>(auctionHighestBid);
+            //return new List<object>(auctionHighestBid);
+            return null;
         }
 
         public List<Auctions> GetAuctionsesFromDate(DateTime start, DateTime end)

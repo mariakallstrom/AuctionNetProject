@@ -40,66 +40,69 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(21, 69);
+            this.lblName.Location = new System.Drawing.Point(24, 86);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 17);
+            this.lblName.Size = new System.Drawing.Size(51, 20);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Namn";
             // 
             // txtSupplierName
             // 
-            this.txtSupplierName.Location = new System.Drawing.Point(24, 89);
+            this.txtSupplierName.Location = new System.Drawing.Point(27, 111);
+            this.txtSupplierName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(166, 22);
+            this.txtSupplierName.Size = new System.Drawing.Size(186, 26);
             this.txtSupplierName.TabIndex = 1;
             // 
             // txtSupplierTelephone
             // 
-            this.txtSupplierTelephone.Location = new System.Drawing.Point(24, 147);
+            this.txtSupplierTelephone.Location = new System.Drawing.Point(27, 184);
+            this.txtSupplierTelephone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSupplierTelephone.Name = "txtSupplierTelephone";
-            this.txtSupplierTelephone.Size = new System.Drawing.Size(166, 22);
+            this.txtSupplierTelephone.Size = new System.Drawing.Size(186, 26);
             this.txtSupplierTelephone.TabIndex = 3;
             // 
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
-            this.lblTelephone.Location = new System.Drawing.Point(21, 127);
+            this.lblTelephone.Location = new System.Drawing.Point(24, 159);
             this.lblTelephone.Name = "lblTelephone";
-            this.lblTelephone.Size = new System.Drawing.Size(56, 17);
+            this.lblTelephone.Size = new System.Drawing.Size(62, 20);
             this.lblTelephone.TabIndex = 2;
             this.lblTelephone.Text = "Telefon";
             // 
             // btnAddSupplier
             // 
-            this.btnAddSupplier.Location = new System.Drawing.Point(249, 75);
+            this.btnAddSupplier.Location = new System.Drawing.Point(280, 94);
+            this.btnAddSupplier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddSupplier.Name = "btnAddSupplier";
-            this.btnAddSupplier.Size = new System.Drawing.Size(114, 72);
+            this.btnAddSupplier.Size = new System.Drawing.Size(128, 90);
             this.btnAddSupplier.TabIndex = 4;
             this.btnAddSupplier.Text = "Spara Leverantör";
             this.btnAddSupplier.UseVisualStyleBackColor = true;
-            this.btnAddSupplier.Click += new System.EventHandler(this.btnAddSupplier_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 18);
+            this.label1.Location = new System.Drawing.Point(24, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.Size = new System.Drawing.Size(85, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Supplier Id";
             // 
             // txtSupplierIdBox
             // 
-            this.txtSupplierIdBox.Location = new System.Drawing.Point(24, 38);
+            this.txtSupplierIdBox.Location = new System.Drawing.Point(27, 48);
+            this.txtSupplierIdBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSupplierIdBox.Name = "txtSupplierIdBox";
-            this.txtSupplierIdBox.Size = new System.Drawing.Size(100, 22);
+            this.txtSupplierIdBox.Size = new System.Drawing.Size(112, 26);
             this.txtSupplierIdBox.TabIndex = 6;
             // 
             // FrmAddSupplier
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 217);
+            this.ClientSize = new System.Drawing.Size(458, 271);
             this.Controls.Add(this.txtSupplierIdBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddSupplier);
@@ -108,8 +111,10 @@
             this.Controls.Add(this.txtSupplierName);
             this.Controls.Add(this.lblName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmAddSupplier";
             this.Text = "Lägg till Leverantör";
+            this.Load += new System.EventHandler(this.FrmAddSupplier_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
