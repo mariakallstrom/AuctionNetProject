@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace AuctionNet.Interfaces
 {
-    interface IAddCustomer
+    interface IProductController
     {
         void ValidateInput();
         void SaveProduct();
+
+        void UppDateProduct();
+
+        void DeleteProduct();
+
+        List<Products> GetAllProducts();
+
+
+
+
     }
 }
