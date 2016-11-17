@@ -39,10 +39,9 @@ namespace AuctionNet.Controllers
             return _auctionNetModel.Auctions.ToList();
         }
 
-        public List<object> GetAuctionsHighestBids()
+        public List<MaxBid> GetAuctionsHighestBids()
         {
-            var list = _auctionNetModel.MaxBid.Select(x=> x.Id +" "+  x.ProductName +" "+ x.EndTime + " " + x.MaxBid1).ToList();
-            return new List<object>(list);
+            return _auctionNetModel.MaxBid.ToList(); 
         }
 
         public List<Auctions> GetAuctionsesFromDate(DateTime start, DateTime end)
