@@ -78,6 +78,7 @@
             this.btnAddSupplier.TabIndex = 4;
             this.btnAddSupplier.Text = "Spara Leverantör";
             this.btnAddSupplier.UseVisualStyleBackColor = true;
+            this.btnAddSupplier.Click += new System.EventHandler(this.btnAddSupplier_Click_1);
             // 
             // FrmAddSupplier
             // 
@@ -93,7 +94,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmAddSupplier";
             this.Text = "Lägg till Leverantör";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,22 +16,14 @@ namespace AuctionNet.Controllers
         {
             _auctionNetModel = new AuctionNetModel();
         }
-        public void ValidateInput()
-        {
-            throw new NotImplementedException();
-        }
 
-        public void AddSupplier()
-        {
-            _auctionNetModel = new AuctionNetModel();
-        }
 
         public List<Suppliers> GetAll()
         {
             return _auctionNetModel.Suppliers.ToList();
         }
 
-        //todo lösa error nedan (i if satsen specifikt)
+       
         public List<ValidationResult> Create(Suppliers suppliers)
         {
             ValidationContext context = new ValidationContext(suppliers,null, null);

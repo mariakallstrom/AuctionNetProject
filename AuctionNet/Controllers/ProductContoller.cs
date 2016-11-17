@@ -14,17 +14,9 @@ namespace AuctionNet.Controllers
     {
         private AuctionNetModel _auctionNetModel;
 
-        public void AddProduct()
-        {
-            _auctionNetModel = new AuctionNetModel();
-            throw new NotImplementedException();
-        }
 
-        public List<Products> GettAll()
-        {
-            return _auctionNetModel.Products.ToList();
 
-        }
+     
 
         public List<ValidationResult> Create(Products products)
         {
@@ -40,31 +32,9 @@ namespace AuctionNet.Controllers
             return result;
         }
 
-      
-
-        public void ValidateInput()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SaveProduct()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UppDateProduct()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteProduct()
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Products> GetAllProducts()
         {
-            throw new NotImplementedException();
+            return _auctionNetModel.Products.ToList();
         }
     }
 }

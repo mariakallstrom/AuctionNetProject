@@ -15,11 +15,11 @@ namespace AuctionNet.Forms
 {
     public partial class FrmAddProduct : Form
     {
-        private readonly AuctionNetModel _auctionNetModel;
+      
         private readonly ProductContoller _productContoller;
         public FrmAddProduct()
         {
-            _auctionNetModel = new AuctionNetModel();
+           
             _productContoller = new ProductContoller();
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace AuctionNet.Forms
 
         }
 
-        // todo lösa error på convert delen nedan
+      
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
@@ -39,8 +39,8 @@ namespace AuctionNet.Forms
                 {
                     ProductName = txtProductName.Text,
                     Description = txtDescription.Text,
-                    StartPrice = Convert.ToDecimal(txtStartPrice.Text),
-                    Commission = Convert.ToDecimal(txtCommission.Text),
+                    StartPrice = Convert.ToDecimal(txtStartPrice.Text.Replace(".",",")),
+                    Commission = Convert.ToDecimal(txtCommission.Text.Replace(".", ",")),
                     SupplierId = Convert.ToInt32(txtSupplier.Text),
                 });
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,11 @@ namespace AuctionNet.Interfaces
 {
     interface ISupplierController
     {
-        void ValidateInput();
-        void AddSupplier();
+        List<ValidationResult> Create(Suppliers suppliers); 
+            
+       List<Suppliers> GetAll();
 
-        
+
+
     }
 }
