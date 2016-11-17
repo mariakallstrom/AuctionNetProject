@@ -27,24 +27,28 @@ namespace AuctionNet
         {
             FrmAddProduct frmAddProduct = new FrmAddProduct();
             frmAddProduct.Show();
+            Hide();
         }
 
         private void btnAddSupplier_Click(object sender, EventArgs e)
         {
             FrmAddSupplier frmAddSupplier = new FrmAddSupplier();
             frmAddSupplier.Show();
+            Hide();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             FrmAddCustomer frmAddCustomer = new FrmAddCustomer();
             frmAddCustomer.Show();
+            Hide();
         }
 
         private void btnAddAuction_Click(object sender, EventArgs e)
         {
             FrmAddAuction frmAddAuction = new FrmAddAuction();
             frmAddAuction.Show();
+            Hide();
         }
 
         private void btnAddBid_Click(object sender, EventArgs e)
@@ -73,6 +77,11 @@ namespace AuctionNet
             FrmShowAuctions frmShowAuctions = new FrmShowAuctions();
             frmShowAuctions.Show();
             Hide();
+        }
+
+        private void FrmAuctionNetStartPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
