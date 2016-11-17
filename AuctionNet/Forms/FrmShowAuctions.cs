@@ -18,21 +18,13 @@ namespace AuctionNet.Forms
         {
             InitializeComponent();
             _auctionController = new AuctionController();
-            ShowAuctions();
+        
         }
 
-        public void ShowAuctions()
-        {
-            var auctions = _auctionController.GetAllAuctions();
-            dgvAllAuction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvAllAuction.BackgroundColor = Color.White;
-            dgvAllAuction.RowHeadersVisible = false;
-            dgvAllAuction.DataSource = auctions;
-        }
+        
 
         private void FrmShowAuctions_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -40,6 +32,21 @@ namespace AuctionNet.Forms
             FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
             f.Show();
             Hide();
+        }
+
+        private void btnGet_Click(object sender, EventArgs e)
+        {
+            dgvAllAuction.DataSource = _auctionController.GetAuctionsFromDate(CalendarView.SelectionStart.Date, CalendarView.SelectionEnd.Date);
+        }
+
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+
+            var auctions = _auctionController.GetAllAuctions().ToList();
+            dgvAllAuction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvAllAuction.BackgroundColor = Color.White;
+            dgvAllAuction.RowHeadersVisible = false;
+            dgvAllAuction.DataSource = auctions;
         }
     }
 }

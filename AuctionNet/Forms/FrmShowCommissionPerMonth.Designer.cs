@@ -28,32 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listViewCommission = new System.Windows.Forms.ListView();
+            this.components = new System.ComponentModel.Container();
+            this.auctionNetDataSet = new AuctionNet.AuctionNetDataSet();
+            this.auctionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.auctionsTableAdapter = new AuctionNet.AuctionNetDataSetTableAdapters.AuctionsTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.auctionNetDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auctionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listViewCommission
+            // auctionNetDataSet
             // 
-            this.listViewCommission.Location = new System.Drawing.Point(0, -2);
-            this.listViewCommission.Name = "listViewCommission";
-            this.listViewCommission.Size = new System.Drawing.Size(335, 353);
-            this.listViewCommission.TabIndex = 0;
-            this.listViewCommission.UseCompatibleStateImageBehavior = false;
+            this.auctionNetDataSet.DataSetName = "AuctionNetDataSet";
+            this.auctionNetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // auctionsBindingSource
+            // 
+            this.auctionsBindingSource.DataMember = "Auctions";
+            this.auctionsBindingSource.DataSource = this.auctionNetDataSet;
+            // 
+            // auctionsTableAdapter
+            // 
+            this.auctionsTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 18;
+            this.dataGridView1.Size = new System.Drawing.Size(1057, 448);
+            this.dataGridView1.TabIndex = 0;
             // 
             // FrmShowCommissionPerMonth
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 348);
-            this.Controls.Add(this.listViewCommission);
+            this.ClientSize = new System.Drawing.Size(1093, 473);
+            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmShowCommissionPerMonth";
             this.Text = "Provision Per Månad";
+            this.Load += new System.EventHandler(this.FrmShowCommissionPerMonth_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.auctionNetDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auctionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listViewCommission;
+        private AuctionNetDataSet auctionNetDataSet;
+        private System.Windows.Forms.BindingSource auctionsBindingSource;
+        private AuctionNetDataSetTableAdapters.AuctionsTableAdapter auctionsTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
