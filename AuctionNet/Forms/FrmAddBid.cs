@@ -13,8 +13,9 @@ namespace AuctionNet.Forms
 {
     public partial class FrmAddBid : Form
     {
-       
+        private void btnAddBid_Click(object sender, EventArgs e)
+        {
 
-       
+        }
     }
 }

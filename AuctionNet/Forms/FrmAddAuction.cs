@@ -29,6 +29,9 @@ namespace AuctionNet.Forms
 
         }
 
-    
+        private void btnAddAuction_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
