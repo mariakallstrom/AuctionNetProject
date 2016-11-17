@@ -116,9 +116,9 @@
             // 
             // btnShowAll
             // 
-            this.btnShowAll.Location = new System.Drawing.Point(807, 245);
+            this.btnShowAll.Location = new System.Drawing.Point(682, 235);
             this.btnShowAll.Name = "btnShowAll";
-            this.btnShowAll.Size = new System.Drawing.Size(109, 40);
+            this.btnShowAll.Size = new System.Drawing.Size(281, 40);
             this.btnShowAll.TabIndex = 11;
             this.btnShowAll.Text = "Hämta alla auktioner";
             this.btnShowAll.UseVisualStyleBackColor = true;

@@ -20,7 +20,6 @@ namespace AuctionNet.Forms
             _auctionController = new AuctionController();
         
         }
-
         
 
         private void FrmShowAuctions_Load(object sender, EventArgs e)
@@ -41,8 +40,7 @@ namespace AuctionNet.Forms
 
         private void btnShowAll_Click(object sender, EventArgs e)
         {
-
-            var auctions = _auctionController.GetAllAuctions().ToList();
+            var auctions = _auctionController.GetAllAuctions();
             dgvAllAuction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvAllAuction.BackgroundColor = Color.White;
             dgvAllAuction.RowHeadersVisible = false;

@@ -21,10 +21,10 @@ namespace AuctionNet.Forms
           
         }
 
-
         private void FrmShowCommissionPerMonth_Load(object sender, EventArgs e)
         {
            dataGridView1.DataSource = _auctionController.GetAuctionsViewCommission();
+           
 
         }
     }
