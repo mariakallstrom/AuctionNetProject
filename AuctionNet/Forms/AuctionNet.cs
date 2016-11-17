@@ -51,24 +51,28 @@ namespace AuctionNet
         {
             FrmAddBid frmAddBid = new FrmAddBid();
             frmAddBid.Show();
+            Hide();
         }
 
         private void btnShowAllCustomers_Click(object sender, EventArgs e)
         {
             FrmCustomerList frmCustomerList = new FrmCustomerList();
             frmCustomerList.Show();
+            Hide();
         }
 
         private void btnShowMonthlyCommission_Click(object sender, EventArgs e)
         {
             FrmShowCommissionPerMonth frmCommissionPerMonth = new FrmShowCommissionPerMonth();
             frmCommissionPerMonth.Show();
+            Hide();
         }
 
         private void btnViewCurrentAuctions_Click(object sender, EventArgs e)
         {
             FrmShowAuctions frmShowAuctions = new FrmShowAuctions();
             frmShowAuctions.Show();
+            Hide();
         }
     }
 }
