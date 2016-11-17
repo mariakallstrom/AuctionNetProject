@@ -43,7 +43,7 @@ namespace AuctionNet
 
         private void btnAddAuction_Click(object sender, EventArgs e)
         {
-            FrmAddAuctin frmAddAuction = new FrmAddAuctin();
+            FrmAddAuction frmAddAuction = new FrmAddAuction();
             frmAddAuction.Show();
         }
 

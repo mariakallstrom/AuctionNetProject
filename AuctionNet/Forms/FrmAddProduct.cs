@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AuctionNet.Controllers;
+using AuctionNet.Models;
 
 namespace AuctionNet.Forms
 {
@@ -80,7 +81,7 @@ namespace AuctionNet.Forms
 
                 MessageBox.Show("New product is added!");
 
-                if (result.Count <0)
+                if (result.Count() <0)
                 {
                     MessageBox.Show(string.Join(Environment.NewLine, result), "Error", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);

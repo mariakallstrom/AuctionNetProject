@@ -1,4 +1,4 @@
-﻿namespace AuctionNet.Forms
+﻿namespace AuctionNet
 {
     partial class FrmAuctionNetStartPage
     {
@@ -143,7 +143,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmAuctionNetStartPage";
             this.Text = "AuctionNet";
-            this.Load += new System.EventHandler(this.FrmAuctionNetStartPage_Load);
+            //this.Load += new System.EventHandler(this.FrmAuctionNetStartPage_Load);
             this.ResumeLayout(false);
 
         }
