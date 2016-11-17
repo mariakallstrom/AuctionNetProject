@@ -32,6 +32,8 @@ namespace AuctionNet
 
         public int SupplierId { get; set; }
 
+        public byte[] Picture { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Auctions> Auctions { get; set; }
 

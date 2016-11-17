@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +16,16 @@ namespace AuctionNet.Forms
 {
     public partial class FrmAddProduct : Form
     {
-      
+
+        /* Låt stå
+         byte[] test = _productContoller.GetAllProducts().Where(x => x.Id == 5).Select(x => x.Picture).Single();
+         File.WriteAllBytes(@"C:\Users\Carl-Fredrik\Desktop\test.png", test);
+         */
+
+        byte[] imageBytes;
         private readonly ProductContoller _productContoller;
         public FrmAddProduct()
         {
-           
             _productContoller = new ProductContoller();
             InitializeComponent();
         }
@@ -38,7 +44,9 @@ namespace AuctionNet.Forms
                     Description = txtDescription.Text,
                     StartPrice = decimal.Parse(txtStartPrice.Text.Replace(".", ",")),
                     Commission = decimal.Parse(txtCommission.Text.Replace(".", ",")),
-                    SupplierId = int.Parse(txtSupplier.Text)
+                    SupplierId = int.Parse(txtSupplier.Text),
+                    Picture = imageBytes
+                   
                 });
 
                 if (result.Count > 0)
@@ -52,5 +60,23 @@ namespace AuctionNet.Forms
                 }
             
         }
+
+        private void AddPicture_Click(object sender, EventArgs e)
+        {
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog1.FileName;
+                try
+                {
+                    imageBytes = File.ReadAllBytes(file);
+                }
+                catch (IOException)
+                {
+                    MessageBox.Show("Image could not be read.");
+                }
+            }
+        }
     }
 }
+ 
