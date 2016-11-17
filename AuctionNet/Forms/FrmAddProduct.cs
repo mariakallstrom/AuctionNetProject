@@ -15,11 +15,9 @@ namespace AuctionNet.Forms
 {
     public partial class FrmAddProduct : Form
     {
-        private readonly AuctionNetModel _auctionNetModel;
         private readonly ProductContoller _productContoller;
         public FrmAddProduct()
         {
-            _auctionNetModel = new AuctionNetModel();
             _productContoller = new ProductContoller();
             InitializeComponent();
         }
@@ -69,25 +67,26 @@ namespace AuctionNet.Forms
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            {
              var result = _productContoller.Create(new Products
                 {
                     ProductName = txtProductName.Text,
                     Description = txtDescription.Text,
-                    StartPrice = Convert.ToDecimal(txtStartPrice.Text),
-                    Commission = Convert.ToDecimal(txtCommission.Text),
+                    StartPrice = Convert.ToDecimal(txtStartPrice.Text.Replace(".",",")),
+                    Commission = Convert.ToDecimal(txtCommission.Text.Replace(".",",")),
                     SupplierId = Convert.ToInt32(txtSupplier.Text),
                 });
 
-                MessageBox.Show("New product is added!");
 
-                if (result.Count() <0)
+                if (result.Count > 0)
                 {
                     MessageBox.Show(string.Join(Environment.NewLine, result), "Error", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
-            }
+                else
+                {
+                MessageBox.Show("New product is added!");
+                }
             
+        }
     }
-}
 }

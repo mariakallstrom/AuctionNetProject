@@ -12,11 +12,14 @@ namespace AuctionNet.Controllers
 {
     public class ProductContoller : IProductController
     {
-        private AuctionNetModel _auctionNetModel;
+        private readonly AuctionNetModel _auctionNetModel;
 
-        public void AddProduct()
+        public ProductContoller()
         {
             _auctionNetModel = new AuctionNetModel();
+        }
+        public void AddProduct()
+        {
             throw new NotImplementedException();
         }
 
