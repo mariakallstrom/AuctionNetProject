@@ -39,6 +39,9 @@
             this.txtSupplier = new System.Windows.Forms.TextBox();
             this.lblSupplier = new System.Windows.Forms.Label();
             this.btnAddProduct = new System.Windows.Forms.Button();
+            this.AddPicture = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblProductName
@@ -138,11 +141,37 @@
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
+            // AddPicture
+            // 
+            this.AddPicture.Location = new System.Drawing.Point(331, 349);
+            this.AddPicture.Name = "AddPicture";
+            this.AddPicture.Size = new System.Drawing.Size(220, 71);
+            this.AddPicture.TabIndex = 11;
+            this.AddPicture.Text = "Lägg till bild";
+            this.AddPicture.UseVisualStyleBackColor = true;
+            this.AddPicture.Click += new System.EventHandler(this.AddPicture_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(221, 360);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 60);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 458);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddPicture);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.txtSupplier);
             this.Controls.Add(this.lblSupplier);
@@ -177,5 +206,8 @@
         private System.Windows.Forms.TextBox txtSupplier;
         private System.Windows.Forms.Label lblSupplier;
         private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Button AddPicture;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button1;
     }
 }
