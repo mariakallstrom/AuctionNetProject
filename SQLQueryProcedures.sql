@@ -110,11 +110,14 @@ GROUP BY CustomerName
 --Fråga 9
 --Vad den totala provisionen är per månad.
 
-CREATE VIEW CommisionMonth
+CREATE VIEW CommissionMonth
 AS
-SELECT FORMAT(EndDate,'yyyy,MM') AS YearMonth , Sum(EndPrice) AS TotalCommision
+SELECT FORMAT(EndDate,'yyyy,MM') AS YearMonth , Sum(EndPrice*Commission) AS TotalCommision
 FROM AuctionHistory
 GROUP BY EndDate
+
+Select * from Products
+Select * from AuctionHistory
 
 
 

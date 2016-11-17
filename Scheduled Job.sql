@@ -70,7 +70,7 @@ DECLARE @CustomerId INT
 DECLARE @CustomerName NVARCHAR(50)
 DECLARE @StartDate DATETIME
 DECLARE @EndDate DATETIME
-DECLARE @Commission DECIMAL
+DECLARE @Commission DECIMAL(5,2)
 
 
 
@@ -96,11 +96,11 @@ ELSE
 				SET @CustomerName = (SELECT Name FROM Customers WHERE id = @CustomerId)
 				SET @StartDate = (SELECT StartTime FROM Auctions WHERE Id = @EndedAuction)
 				SET @EndDate = (SELECT EndTime FROM Auctions WHERE Id = @EndedAuction)
-				SET @Commission = (SELECT Commission FROM Poduct WHERE Id = @ProductId)
+				SET @Commission = (SELECT Commission FROM Products WHERE Id = @ProductId)
 
 
-				INSERT INTO AuctionHistory(AuctionNumber,ProductName,SuplierName,StartPrice,EndPrice,CustomerName,StartDate, EndDate, Commission)
-				VALUES (@EndedAuction,@ProductName,@SupplierName,@StartPrice,@EndPrice,@CustomerName, @StartDate, @EndDate, @Commission)
+				INSERT INTO AuctionHistory(AuctionNumber,ProductName,SuplierName,StartPrice,EndPrice,CustomerName,StartDate,EndDate,Commission)
+				VALUES (@EndedAuction,@ProductName,@SupplierName,@StartPrice,@EndPrice,@CustomerName,@StartDate,@EndDate,@Commission)
 				DELETE FROM Auctions WHERE Id = @EndedAuction
 			 END
 	    ELSE
