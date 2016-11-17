@@ -100,9 +100,3 @@ VALUES (2,3,6000,GETDATE());
 
 INSERT INTO Bids(CustomerId,AuctionId,Bid,Date)
 VALUES (1,4,667000,GETDATE());
-
---SELECT * FROM Bids
-
---SELECT * FROM Auctions
-
---SELECT * FROM Products

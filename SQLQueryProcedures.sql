@@ -2,6 +2,8 @@ USE AuctionNet
 GO
 
 --Fråga 1
+--Registrera en produkt.
+
 --CREATE PROCEDURE AddProduct
 --@ProductName NVARCHAR(50),
 --@Description NVARCHAR(200),
@@ -21,6 +23,9 @@ GO
 
 
 --Fråga 2
+--Skapa en auktion utifrån en viss produkt där man kan sätta utgångspris,
+--acceptpris samt start och slutdatum för auktionen.
+
 --CREATE PROCEDURE AddAuction
 --@AcceptPrice DECIMAL(18,0),
 --@StartPrice DECIMAL,
@@ -43,7 +48,10 @@ GO
 --SELECT * FROM Auctions
 
 
-----Fråga 3
+--Fråga 3
+--Lista pågående auk-oner samt kunna se det högsta budet och vilken kund
+--som lagt det.
+
 --CREATE VIEW MaxBid
 --AS
 --Select Auctions.Id, Products.ProductName, Max(Bid) AS MaxBid, 
@@ -61,6 +69,8 @@ GO
 
 
 --Fråga 4
+--Se budhistoriken på en viss auk-on, samt vilka kunder som lagt buden.
+
 --CREATE PROCEDURE ViewBids (@AuctionId INT)
 --AS
 --BEGIN TRY
@@ -80,6 +90,9 @@ GO
 
 
 --Fråga 5
+--Vilka auktioner avslutas under ett visst datumintervall? Samt vad blir
+--provisionen för varje auk-on inom det intervallet? 
+
 --CREATE PROCEDURE ViewCommission(@Fromdate Datetime, @ToDate DateTime)
 --AS
 --BEGIN TRY
@@ -100,24 +113,23 @@ GO
 --Fråga 8
 --Visa en kundlista på alla kunder som köpt något, samt vad deras totala ordervärde är.
 
-CREATE VIEW CustomerTotalOrderValue
-AS
-SELECT  CustomerName, Sum(EndPrice) as TotalOrderValue
-FROM AuctionHistory 
-GROUP BY CustomerName
+--CREATE VIEW CustomerTotalOrderValue
+--AS
+--SELECT  CustomerName, Sum(EndPrice) as TotalOrderValue
+--FROM AuctionHistory 
+--GROUP BY CustomerName
 
 
 --Fråga 9
 --Vad den totala provisionen är per månad.
 
-CREATE VIEW CommissionMonth
-AS
-SELECT FORMAT(EndDate,'yyyy,MM') AS YearMonth , Sum(EndPrice*Commission) AS TotalCommision
-FROM AuctionHistory
-GROUP BY EndDate
+--CREATE VIEW CommissionMonth
+--AS
+--SELECT FORMAT(EndDate,'yyyy,MM') AS YearMonth , Sum(EndPrice*Commission) AS TotalCommision
+--FROM AuctionHistory
+--GROUP BY EndDate
 
-Select * from Products
-Select * from AuctionHistory
+
 
 
 

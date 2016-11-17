@@ -1,8 +1,6 @@
 USE [msdb]
 GO
 
-
-
 BEGIN TRANSACTION
 DECLARE @ReturnCode INT
 SELECT @ReturnCode = 0
@@ -152,5 +150,3 @@ QuitWithRollback:
 EndSave:
 
 GO
-
-
