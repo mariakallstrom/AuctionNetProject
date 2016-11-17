@@ -57,16 +57,19 @@ INSERT INTO Products(ProductName,Description,StartPrice,Commission,SupplierId)
 VALUES ('Gamla mynt','Från 2007',100,0.05,2);
 
 INSERT INTO Auctions(AcceptPrice, StartTime,EndTime,ProductId)
-VALUES (6000, GETDATE(),GETDATE()+10,1) 
+VALUES (6000, GETDATE(),'2016-11-16 12:00:00.000',1) 
 
 INSERT INTO Auctions(AcceptPrice, StartTime,EndTime,ProductId)
-VALUES (60000, GETDATE(),GETDATE()+10,4) 
+VALUES (60000, GETDATE(),'2016-11-16 12:00:00.000',4) 
 
 INSERT INTO Auctions(AcceptPrice, StartTime,EndTime,ProductId)
-VALUES (600, GETDATE(),GETDATE()+10,6) 
+VALUES (600, GETDATE(),'2016-11-16 12:00:00.000',6) 
 
 INSERT INTO Auctions(AcceptPrice, StartTime,EndTime,ProductId)
-VALUES (800,GETDATE(),GETDATE()+10,3) 
+VALUES (800,GETDATE(),'2016-10-16 12:00:00.000',3) 
+
+--INSERT INTO Auctions(AcceptPrice, StartTime,EndTime,ProductId)
+--VALUES (800,GETDATE(),GETDATE()+10,3) 
 
 INSERT INTO Bids(CustomerId,AuctionId,Bid,Date)
 VALUES (1,1,5000,GETDATE());
@@ -94,3 +97,8 @@ VALUES (5,3,7000,GETDATE());
 
 INSERT INTO Bids(CustomerId,AuctionId,Bid,Date)
 VALUES (2,3,6000,GETDATE());
+
+INSERT INTO Bids(CustomerId,AuctionId,Bid,Date)
+VALUES (1,3,6000,GETDATE());
+
+

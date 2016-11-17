@@ -1,5 +1,7 @@
 USE AuctionNet
 GO
+
+--Fråga 1
 --CREATE PROCEDURE AddProduct
 --@ProductName NVARCHAR(50),
 --@Description NVARCHAR(200),
@@ -18,7 +20,7 @@ GO
 --EXEC AddProduct 'Gammal väska','Röd läderväska från Michael Kors',4500,0.12,1
 
 
-
+--Fråga 2
 --CREATE PROCEDURE AddAuction
 --@AcceptPrice DECIMAL(18,0),
 --@StartPrice DECIMAL,
@@ -41,6 +43,23 @@ GO
 --SELECT * FROM Auctions
 
 
+----Fråga 3
+--CREATE VIEW MaxBid
+--AS
+--Select Auctions.Id, Products.ProductName, Max(Bid) AS MaxBid, 
+--Auctions.EndTime FROM Bids 
+--INNER JOIN Auctions ON Bids.AuctionId = Auctions.Id
+--INNER JOIN Products ON Products.Id = Auctions.ProductId
+--Group by Auctions.Id, Products.ProductName, 
+--Auctions.EndTime;
+
+--Select MaxBid.Id , MaxBid.MaxBid, MaxBid.EndTime, Customers.Name, Customers.Id from MaxBid
+--inner join bids on bids.AuctionId= MaxBid.Id
+--inner join customers on Customers.Id = bids.CustomerId
+--Group by MaxBid.Id , MaxBid.MaxBid, MaxBid.EndTime, Customers.Name, Customers.Id
+--having (Max(Bids.bid) = MaxBid.MaxBid)
+
+
 --Fråga 4
 --CREATE PROCEDURE ViewBids (@AuctionId INT)
 --AS
@@ -58,6 +77,7 @@ GO
 --END CATCH
 
 --EXEC ViewBids 1
+
 
 --Fråga 5
 --CREATE PROCEDURE ViewCommission(@Fromdate Datetime, @ToDate DateTime)
@@ -77,22 +97,28 @@ GO
 --EXEC ViewCommission '2016.05.12','2016.11.26'
 
 
-----Fråga 3
---CREATE VIEW MaxBid
---AS
---Select Auctions.Id, Products.ProductName, Max(Bid) AS MaxBid, 
---Auctions.EndTime FROM Bids 
---INNER JOIN Auctions ON Bids.AuctionId = Auctions.Id
---INNER JOIN Products ON Products.Id = Auctions.ProductId
---Group by Auctions.Id, Products.ProductName, 
---Auctions.EndTime;
+--Fråga 8
+--Visa en kundlista på alla kunder som köpt något, samt vad deras totala ordervärde är.
 
---Select MaxBid.Id , MaxBid.MaxBid, MaxBid.EndTime, Customers.Name, Customers.Id from MaxBid
---inner join bids on bids.AuctionId= MaxBid.Id
---inner join customers on Customers.Id = bids.CustomerId
---Group by MaxBid.Id , MaxBid.MaxBid, MaxBid.EndTime, Customers.Name, Customers.Id
---having (Max(Bids.bid) = MaxBid.MaxBid)
+CREATE VIEW CustomerTotalOrderValue
+AS
+SELECT  CustomerName, Sum(EndPrice) as TotalOrderValue
+FROM AuctionHistory 
+GROUP BY CustomerName
 
 
+--Fråga 9
+--Vad den totala provisionen är per månad.
+
+CREATE VIEW CommisionMonth
+AS
+SELECT FORMAT(EndDate,'yyyy,MM') AS YearMonth , Sum(EndPrice) AS TotalCommision
+FROM AuctionHistory
+GROUP BY EndDate
 
 
+
+
+SELECT * FROM AuctionHistory
+
+SELECT * FROM Auctions
