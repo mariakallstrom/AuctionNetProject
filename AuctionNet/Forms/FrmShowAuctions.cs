@@ -23,7 +23,7 @@ namespace AuctionNet.Forms
 
         public void ShowAuctions()
         {
-            var auctions = _auctionController.GetAuctionsHighestBids();
+            var auctions = _auctionController.GetAllAuctions();
             dgvAllAuction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvAllAuction.BackgroundColor = Color.White;
             dgvAllAuction.RowHeadersVisible = false;
@@ -33,6 +33,13 @@ namespace AuctionNet.Forms
         private void FrmShowAuctions_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
+            f.Show();
+            Hide();
         }
     }
 }

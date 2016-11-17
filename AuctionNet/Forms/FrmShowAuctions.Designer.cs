@@ -36,6 +36,7 @@
             this.lblFromDate = new System.Windows.Forms.Label();
             this.lblToDate = new System.Windows.Forms.Label();
             this.dgvAllAuction = new System.Windows.Forms.DataGridView();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAuction)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,11 +109,22 @@
             this.dgvAllAuction.Size = new System.Drawing.Size(511, 385);
             this.dgvAllAuction.TabIndex = 8;
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(708, 777);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(122, 50);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Tillbaka";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // FrmShowAuctions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 884);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvAllAuction);
             this.Controls.Add(this.lblToDate);
             this.Controls.Add(this.lblFromDate);
@@ -141,5 +153,6 @@
         private System.Windows.Forms.Label lblFromDate;
         private System.Windows.Forms.Label lblToDate;
         private System.Windows.Forms.DataGridView dgvAllAuction;
+        private System.Windows.Forms.Button btnBack;
     }
 }

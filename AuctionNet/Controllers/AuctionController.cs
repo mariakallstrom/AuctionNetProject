@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using AuctionNet.Forms;
 using AuctionNet.Interfaces;
@@ -32,6 +33,7 @@ namespace AuctionNet.Controllers
             };
             _auctionNetModel.Auctions.Add(auction);
             _auctionNetModel.SaveChanges();
+            MessageBox.Show(@"En Auktion har lagts till");
         }
 
         public List<Auctions> GetAllAuctions()

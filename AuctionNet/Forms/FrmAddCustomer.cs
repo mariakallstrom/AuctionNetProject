@@ -1,6 +1,6 @@
 ﻿
 using System;
-
+using System.Linq;
 using System.Windows.Forms;
 using AuctionNet.Controllers;
 
@@ -22,6 +22,19 @@ namespace AuctionNet.Forms
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             _customerController.AddCustomer();
+            MessageBox.Show(@"En kund har lagts till");
+            Clear();
+            FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
+            f.Show();
+            Hide();
+
+        }
+        public void Clear()
+        {
+            foreach (TextBox item in Formcust.Controls.OfType<TextBox>())
+            {
+                item.Text = "";
+            }
         }
     }
 }
