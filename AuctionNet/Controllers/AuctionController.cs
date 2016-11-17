@@ -54,5 +54,14 @@ namespace AuctionNet.Controllers
         {
             throw new NotImplementedException();
         }
+
+        public List<Bids> GetBidHistory(int id)
+        {
+            var bids = from b in _auctionNetModel.Bids
+                       where b.AuctionId == id
+                       select b;
+
+            return bids.ToList();
+        }
     }
 }

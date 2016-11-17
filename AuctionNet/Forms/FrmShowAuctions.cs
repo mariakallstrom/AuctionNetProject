@@ -23,11 +23,34 @@ namespace AuctionNet.Forms
 
         public void ShowAuctions()
         {
+
             var auctions = _auctionController.GetAuctionsHighestBids();
             dgvAllAuction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvAllAuction.BackgroundColor = Color.White;
+            dgvBidHistory.BackgroundColor = Color.White;
             dgvAllAuction.RowHeadersVisible = false;
             dgvAllAuction.DataSource = auctions;
+
+        }
+
+        private void dgvAllAuction_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //var cellindex = dgvBidHistory.SelectedCells[0].RowIndex;
+            //var cellcollection = dgvBidHistory.Rows[cellindex].Cells[0];
+            //int auctionId = (int)dgvBidHistory.Value;
+
+            DataGridViewRow row = this.dgvAllAuction.SelectedRows[0];
+            int auctionId = (int)row.Cells["Id"].Value;
+
+            //int auctionId = (int)dgvBidHistory.SelectedRows[0].Cells[0].Value;
+            var bidHistory = _auctionController.GetBidHistory(auctionId);
+            dgvBidHistory.DataSource = bidHistory;
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
         }
     }
 }

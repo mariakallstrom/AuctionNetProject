@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listViewBidHistory = new System.Windows.Forms.ListView();
             this.lblBidHistory = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CalendarFromDate = new System.Windows.Forms.MonthCalendar();
@@ -36,16 +35,10 @@
             this.lblFromDate = new System.Windows.Forms.Label();
             this.lblToDate = new System.Windows.Forms.Label();
             this.dgvAllAuction = new System.Windows.Forms.DataGridView();
+            this.dgvBidHistory = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAuction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBidHistory)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listViewBidHistory
-            // 
-            this.listViewBidHistory.Location = new System.Drawing.Point(510, 68);
-            this.listViewBidHistory.Name = "listViewBidHistory";
-            this.listViewBidHistory.Size = new System.Drawing.Size(259, 308);
-            this.listViewBidHistory.TabIndex = 1;
-            this.listViewBidHistory.UseCompatibleStateImageBehavior = false;
             // 
             // lblBidHistory
             // 
@@ -103,12 +96,24 @@
             this.dgvAllAuction.RowTemplate.Height = 24;
             this.dgvAllAuction.Size = new System.Drawing.Size(454, 308);
             this.dgvAllAuction.TabIndex = 8;
+            this.dgvAllAuction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllAuction_CellContentClick);
+            // 
+            // dgvBidHistory
+            // 
+            this.dgvBidHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBidHistory.GridColor = System.Drawing.Color.White;
+            this.dgvBidHistory.Location = new System.Drawing.Point(510, 88);
+            this.dgvBidHistory.Name = "dgvBidHistory";
+            this.dgvBidHistory.RowTemplate.Height = 24;
+            this.dgvBidHistory.Size = new System.Drawing.Size(240, 288);
+            this.dgvBidHistory.TabIndex = 9;
             // 
             // FrmShowAuctions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 707);
+            this.Controls.Add(this.dgvBidHistory);
             this.Controls.Add(this.dgvAllAuction);
             this.Controls.Add(this.lblToDate);
             this.Controls.Add(this.lblFromDate);
@@ -116,18 +121,17 @@
             this.Controls.Add(this.CalendarFromDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblBidHistory);
-            this.Controls.Add(this.listViewBidHistory);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmShowAuctions";
             this.Text = "Pågående Auktioner";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAuction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBidHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ListView listViewBidHistory;
         private System.Windows.Forms.Label lblBidHistory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MonthCalendar CalendarFromDate;
@@ -135,5 +139,6 @@
         private System.Windows.Forms.Label lblFromDate;
         private System.Windows.Forms.Label lblToDate;
         private System.Windows.Forms.DataGridView dgvAllAuction;
+        private System.Windows.Forms.DataGridView dgvBidHistory;
     }
 }
