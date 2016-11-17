@@ -24,6 +24,9 @@ namespace AuctionNet.Forms
             _customerController.AddCustomer();
             MessageBox.Show(@"En kund har lagts till");
             Clear();
+            FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
+            f.Show();
+            Hide();
 
         }
         public void Clear()
