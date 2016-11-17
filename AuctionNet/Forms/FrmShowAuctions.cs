@@ -29,5 +29,10 @@ namespace AuctionNet.Forms
             dgvAllAuction.RowHeadersVisible = false;
             dgvAllAuction.DataSource = auctions;
         }
+
+        private void FrmShowAuctions_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
