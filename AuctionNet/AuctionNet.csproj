@@ -57,17 +57,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AuctionController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\ProductContoller.cs" />
+    <Compile Include="Controllers\SupplierController.cs" />
+    <Compile Include="Forms\FrmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerList.Designer.cs">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmShowAuctions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmShowAuctions.Designer.cs">
+      <DependentUpon>FrmShowAuctions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmShowCommissionPerMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmShowCommissionPerMonth.Designer.cs">
+      <DependentUpon>FrmShowCommissionPerMonth.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\AuctionHistory.cs" />
     <Compile Include="AuctionNetModel.cs" />
     <Compile Include="Models\Auctions.cs" />
     <Compile Include="Models\Bids.cs" />
     <Compile Include="Models\Customers.cs" />
-    <Compile Include="Forms\FrmAddAuctin.cs">
+    <Compile Include="Forms\FrmAddAuction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmAddAuctin.Designer.cs">
-      <DependentUpon>FrmAddAuctin.cs</DependentUpon>
+    <Compile Include="Forms\FrmAddAuction.Designer.cs">
+      <DependentUpon>FrmAddAuction.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmAddBid.cs">
       <SubType>Form</SubType>
@@ -87,11 +108,11 @@
     <Compile Include="Forms\FrmAddProduct.Designer.cs">
       <DependentUpon>FrmAddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AuctionNet .cs">
+    <Compile Include="Forms\AuctionNet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AuctionNet .Designer.cs">
-      <DependentUpon>AuctionNet .cs</DependentUpon>
+    <Compile Include="Forms\AuctionNet.Designer.cs">
+      <DependentUpon>AuctionNet.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmAddSupplier.cs">
       <SubType>Form</SubType>
@@ -109,8 +130,8 @@
     <Compile Include="Models\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Suppliers.cs" />
-    <EmbeddedResource Include="Forms\FrmAddAuctin.resx">
-      <DependentUpon>FrmAddAuctin.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmAddAuction.resx">
+      <DependentUpon>FrmAddAuction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAddBid.resx">
       <DependentUpon>FrmAddBid.cs</DependentUpon>
@@ -121,11 +142,20 @@
     <EmbeddedResource Include="Forms\FrmAddProduct.resx">
       <DependentUpon>FrmAddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AuctionNet .resx">
-      <DependentUpon>AuctionNet .cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AuctionNet.resx">
+      <DependentUpon>AuctionNet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAddSupplier.resx">
       <DependentUpon>FrmAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCustomerList.resx">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmShowAuctions.resx">
+      <DependentUpon>FrmShowAuctions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmShowCommissionPerMonth.resx">
+      <DependentUpon>FrmShowCommissionPerMonth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

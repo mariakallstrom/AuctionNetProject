@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AuctionNet.Interfaces;
 
 namespace AuctionNet.Forms
 {
-    public partial class FrmAddBid : Form
+    public partial class FrmCustomerList : Form
     {
-       
-
-       
+        public FrmCustomerList()
+        {
+            InitializeComponent();
+        }
     }
 }

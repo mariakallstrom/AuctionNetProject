@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AuctionNet.Controllers;
+using AuctionNet.Models;
 
 namespace AuctionNet.Forms
 {
@@ -21,6 +22,31 @@ namespace AuctionNet.Forms
             _auctionNetModel = new AuctionNetModel();
             _productContoller = new ProductContoller();
             InitializeComponent();
+        }
+
+        public List<Auctions> GetAllAuctions()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Auctions> GetAuctionsesFromDate(DateTime start, DateTime end)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Auctions> GetAuctionsHighestBids()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<object> GetAuctionsViewCommission(DateTime start, DateTime end)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveAuction()
+        {
+            throw new NotImplementedException();
         }
 
         public void SaveProduct()
@@ -55,7 +81,7 @@ namespace AuctionNet.Forms
 
                 MessageBox.Show("New product is added!");
 
-                if (result.Count <0)
+                if (result.Count() <0)
                 {
                     MessageBox.Show(string.Join(Environment.NewLine, result), "Error", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
