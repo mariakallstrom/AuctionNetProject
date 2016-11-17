@@ -71,14 +71,13 @@
             // 
             // btnAddSupplier
             // 
-            this.btnAddSupplier.Location = new System.Drawing.Point(250, 111);
+            this.btnAddSupplier.Location = new System.Drawing.Point(280, 94);
             this.btnAddSupplier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddSupplier.Name = "btnAddSupplier";
-            this.btnAddSupplier.Size = new System.Drawing.Size(151, 100);
+            this.btnAddSupplier.Size = new System.Drawing.Size(128, 90);
             this.btnAddSupplier.TabIndex = 4;
             this.btnAddSupplier.Text = "Spara Leverantör";
             this.btnAddSupplier.UseVisualStyleBackColor = true;
-            this.btnAddSupplier.Click += new System.EventHandler(this.btnAddSupplier_Click);
             // 
             // FrmAddSupplier
             // 
@@ -94,6 +93,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmAddSupplier";
             this.Text = "Lägg till Leverantör";
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

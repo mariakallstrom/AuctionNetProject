@@ -22,41 +22,6 @@ namespace AuctionNet.Forms
             InitializeComponent();
         }
 
-        public List<Auctions> GetAllAuctions()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Auctions> GetAuctionsesFromDate(DateTime start, DateTime end)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Auctions> GetAuctionsHighestBids()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<object> GetAuctionsViewCommission(DateTime start, DateTime end)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SaveAuction()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SaveProduct()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ValidateInput()
-        {
-            throw new NotImplementedException();
-        }
-
         private void FrmAddProduct_Load(object sender, EventArgs e)
         {
           

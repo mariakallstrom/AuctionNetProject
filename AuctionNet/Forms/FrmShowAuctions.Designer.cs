@@ -41,74 +41,78 @@
             // 
             // listViewBidHistory
             // 
-            this.listViewBidHistory.Location = new System.Drawing.Point(510, 68);
+            this.listViewBidHistory.Location = new System.Drawing.Point(574, 85);
+            this.listViewBidHistory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listViewBidHistory.Name = "listViewBidHistory";
-            this.listViewBidHistory.Size = new System.Drawing.Size(259, 308);
+            this.listViewBidHistory.Size = new System.Drawing.Size(291, 384);
             this.listViewBidHistory.TabIndex = 1;
             this.listViewBidHistory.UseCompatibleStateImageBehavior = false;
             // 
             // lblBidHistory
             // 
             this.lblBidHistory.AutoSize = true;
-            this.lblBidHistory.Location = new System.Drawing.Point(507, 38);
+            this.lblBidHistory.Location = new System.Drawing.Point(570, 48);
             this.lblBidHistory.Name = "lblBidHistory";
-            this.lblBidHistory.Size = new System.Drawing.Size(78, 17);
+            this.lblBidHistory.Size = new System.Drawing.Size(88, 20);
             this.lblBidHistory.TabIndex = 2;
             this.lblBidHistory.Text = "Budhistorik";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 414);
+            this.label1.Location = new System.Drawing.Point(17, 518);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 17);
+            this.label1.Size = new System.Drawing.Size(315, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Visa auktioner som avslutas inom intervallet";
             // 
             // CalendarFromDate
             // 
-            this.CalendarFromDate.Location = new System.Drawing.Point(18, 468);
+            this.CalendarFromDate.Location = new System.Drawing.Point(20, 585);
+            this.CalendarFromDate.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.CalendarFromDate.Name = "CalendarFromDate";
             this.CalendarFromDate.TabIndex = 4;
             // 
             // CalendarToDate
             // 
-            this.CalendarToDate.Location = new System.Drawing.Point(314, 468);
+            this.CalendarToDate.Location = new System.Drawing.Point(353, 585);
+            this.CalendarToDate.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.CalendarToDate.Name = "CalendarToDate";
             this.CalendarToDate.TabIndex = 5;
             // 
             // lblFromDate
             // 
             this.lblFromDate.AutoSize = true;
-            this.lblFromDate.Location = new System.Drawing.Point(15, 442);
+            this.lblFromDate.Location = new System.Drawing.Point(17, 552);
             this.lblFromDate.Name = "lblFromDate";
-            this.lblFromDate.Size = new System.Drawing.Size(37, 17);
+            this.lblFromDate.Size = new System.Drawing.Size(42, 20);
             this.lblFromDate.TabIndex = 6;
             this.lblFromDate.Text = "Från";
             // 
             // lblToDate
             // 
             this.lblToDate.AutoSize = true;
-            this.lblToDate.Location = new System.Drawing.Point(311, 442);
+            this.lblToDate.Location = new System.Drawing.Point(350, 552);
             this.lblToDate.Name = "lblToDate";
-            this.lblToDate.Size = new System.Drawing.Size(26, 17);
+            this.lblToDate.Size = new System.Drawing.Size(27, 20);
             this.lblToDate.TabIndex = 7;
             this.lblToDate.Text = "Till";
             // 
             // dgvAllAuction
             // 
             this.dgvAllAuction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllAuction.Location = new System.Drawing.Point(18, 68);
+            this.dgvAllAuction.Location = new System.Drawing.Point(20, 85);
+            this.dgvAllAuction.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvAllAuction.Name = "dgvAllAuction";
             this.dgvAllAuction.RowTemplate.Height = 24;
-            this.dgvAllAuction.Size = new System.Drawing.Size(454, 308);
+            this.dgvAllAuction.Size = new System.Drawing.Size(511, 385);
             this.dgvAllAuction.TabIndex = 8;
             // 
             // FrmShowAuctions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 707);
+            this.ClientSize = new System.Drawing.Size(906, 884);
             this.Controls.Add(this.dgvAllAuction);
             this.Controls.Add(this.lblToDate);
             this.Controls.Add(this.lblFromDate);
@@ -118,8 +122,10 @@
             this.Controls.Add(this.lblBidHistory);
             this.Controls.Add(this.listViewBidHistory);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmShowAuctions";
             this.Text = "Pågående Auktioner";
+            this.Load += new System.EventHandler(this.FrmShowAuctions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAuction)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
