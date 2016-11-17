@@ -1,11 +1,13 @@
 using AuctionNet.Models;
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
+using System.Linq;
+ 
 
 namespace AuctionNet
 {
-    using System;
-    using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
+
 
     public partial class AuctionNetModel : DbContext
     {

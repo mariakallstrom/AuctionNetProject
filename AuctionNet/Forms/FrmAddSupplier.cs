@@ -38,9 +38,8 @@ namespace AuctionNet.Forms
             {
                 var result = _supplierController.Create(new Suppliers
                 {
-                  
-                    Name = Convert.ToString(txtSupplierName),
-                    Phone = Convert.ToString(txtSupplierTelephone)
+                    Name = txtSupplierName.Text,
+                    Phone = txtSupplierTelephone.Text
                 });
                 MessageBox.Show("A new supplier has been saved!");
 
@@ -51,5 +50,6 @@ namespace AuctionNet.Forms
                 }
             }
         }
+    
     }
 }
