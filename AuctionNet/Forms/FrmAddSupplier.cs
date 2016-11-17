@@ -35,21 +35,22 @@ namespace AuctionNet.Forms
 
         private void btnAddSupplier_Click(object sender, EventArgs e)
         {
-            {
                 var result = _supplierController.Create(new Suppliers
                 {
-                  
-                    Name = Convert.ToString(txtSupplierName),
-                    Phone = Convert.ToString(txtSupplierTelephone)
+                    Name = txtSupplierName.Text,
+                    Phone = txtSupplierTelephone.Text
                 });
-                MessageBox.Show("A new supplier has been saved!");
 
-                if (result.Count < 0)
+                if (result.Count > 0)
                 {
                     MessageBox.Show(string.Join(Environment.NewLine, result), "An error was found", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
-            }
+                else
+                {
+                MessageBox.Show("A new supplier has been saved!");
+                }
         }
+    
     }
 }

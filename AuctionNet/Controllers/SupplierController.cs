@@ -11,10 +11,19 @@ namespace AuctionNet.Controllers
     public class SupplierController : ISupplierController
     {
         private AuctionNetModel _auctionNetModel;
+
+        public SupplierController()
+        {
+            _auctionNetModel = new AuctionNetModel();
+        }
+        public void ValidateInput()
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddSupplier()
         {
             _auctionNetModel = new AuctionNetModel();
-            throw new NotImplementedException();
         }
 
         public List<Suppliers> GetAll()
@@ -25,7 +34,7 @@ namespace AuctionNet.Controllers
         //todo lösa error nedan (i if satsen specifikt)
         public List<ValidationResult> Create(Suppliers suppliers)
         {
-            ValidationContext context = new ValidationContext(suppliers, null, null);
+            ValidationContext context = new ValidationContext(suppliers,null, null);
             List<ValidationResult> result = new List<ValidationResult>();
             bool valid = Validator.TryValidateObject(suppliers, context, result, true);
             if (valid)
@@ -36,9 +45,5 @@ namespace AuctionNet.Controllers
             return result;
         }
 
-        public void ValidateInput()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
