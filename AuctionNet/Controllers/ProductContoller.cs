@@ -14,9 +14,10 @@ namespace AuctionNet.Controllers
     {
         private AuctionNetModel _auctionNetModel;
 
-
-
-     
+        public ProductContoller()
+        {
+            _auctionNetModel = new AuctionNetModel();
+        }
 
         public List<ValidationResult> Create(Products products)
         {

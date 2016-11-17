@@ -30,29 +30,27 @@ namespace AuctionNet.Forms
 
         }
 
-      
-
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            {
              var result = _productContoller.Create(new Products
                 {
                     ProductName = txtProductName.Text,
                     Description = txtDescription.Text,
-                    StartPrice = Convert.ToDecimal(txtStartPrice.Text.Replace(".",",")),
-                    Commission = Convert.ToDecimal(txtCommission.Text.Replace(".", ",")),
-                    SupplierId = Convert.ToInt32(txtSupplier.Text),
+                    StartPrice = decimal.Parse(txtStartPrice.Text.Replace(".", ",")),
+                    Commission = decimal.Parse(txtCommission.Text.Replace(".", ",")),
+                    SupplierId = int.Parse(txtSupplier.Text)
                 });
 
-                MessageBox.Show("New product is added!");
-
-                if (result.Count() <0)
+                if (result.Count > 0)
                 {
                     MessageBox.Show(string.Join(Environment.NewLine, result), "Error", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
-            }
+                else
+                {
+                MessageBox.Show("New product is added!");
+                }
             
+        }
     }
-}
 }
