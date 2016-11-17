@@ -117,6 +117,7 @@
             this.btnAddAuction.TabIndex = 8;
             this.btnAddAuction.Text = "Spara Auktion";
             this.btnAddAuction.UseVisualStyleBackColor = true;
+            this.btnAddAuction.Click += new System.EventHandler(this.btnAddAuction_Click);
             // 
             // FrmAddAuction
             // 

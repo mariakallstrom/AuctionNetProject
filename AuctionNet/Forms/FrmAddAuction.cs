@@ -29,6 +29,21 @@ namespace AuctionNet.Forms
 
         }
 
-    
+        private void btnAddAuction_Click(object sender, EventArgs e)
+        {
+            _auctionController.SaveAuction();
+            Clear();
+            FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
+            f.Show();
+            Hide();
+        }
+
+        public void Clear()
+        {
+            foreach (TextBox item in FormAddAuc.Controls.OfType<TextBox>())
+            {
+                item.Text = "";
+            }
+        }
     }
 }

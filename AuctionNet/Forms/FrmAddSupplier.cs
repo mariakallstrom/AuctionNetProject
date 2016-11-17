@@ -14,15 +14,16 @@ namespace AuctionNet.Forms
 {
     public partial class FrmAddSupplier : Form
     {
-        
+
         private readonly SupplierController _supplierController;
+
         public FrmAddSupplier()
         {
-            
+
             _supplierController = new SupplierController();
             InitializeComponent();
         }
- 
+
         private void btnAddSupplier_Click_1(object sender, EventArgs e)
         {
 
@@ -40,7 +41,19 @@ namespace AuctionNet.Forms
             else
             {
                 MessageBox.Show("A new supplier has been saved!");
+                Clear();
+                FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
+                f.Show();
+                Hide();
             }
+
+
         }
+        public void Clear()
+        {
+            txtSupplierTelephone.Text = "";
+            txtSupplierName.Text = "";
+        }
+
     }
 }
