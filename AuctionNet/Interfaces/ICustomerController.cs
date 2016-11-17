@@ -14,6 +14,6 @@ namespace AuctionNet.Interfaces
 
         List<Customers> GetAllCustomers();
 
-        List<AuctionHistory> GetAllBuyers();
+        List<KeyValuePair<string, decimal>> GetAllBuyers();
     }
 }

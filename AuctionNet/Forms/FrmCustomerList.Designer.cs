@@ -28,32 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listViewCustomers = new System.Windows.Forms.ListView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listViewCustomers
+            // dataGridView1
             // 
-            this.listViewCustomers.Location = new System.Drawing.Point(0, 0);
-            this.listViewCustomers.Name = "listViewCustomers";
-            this.listViewCustomers.Size = new System.Drawing.Size(475, 388);
-            this.listViewCustomers.TabIndex = 0;
-            this.listViewCustomers.UseCompatibleStateImageBehavior = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(47, 43);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(205, 469);
+            this.dataGridView1.TabIndex = 3;
             // 
             // FrmCustomerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 385);
-            this.Controls.Add(this.listViewCustomers);
+            this.ClientSize = new System.Drawing.Size(955, 584);
+            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmCustomerList";
             this.Text = "Kundlista";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listViewCustomers;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

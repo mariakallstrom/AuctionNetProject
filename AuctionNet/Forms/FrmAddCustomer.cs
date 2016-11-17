@@ -26,7 +26,6 @@ namespace AuctionNet.Forms
             Clear();
             FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
             f.Show();
-            Hide();
 
         }
         public void Clear()

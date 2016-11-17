@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using AuctionNet.Forms;
@@ -36,9 +37,14 @@ namespace AuctionNet.Controllers
 
         }
 
-        public List<AuctionHistory> GetAllBuyers()
+        public List<KeyValuePair<string,decimal>> GetAllBuyers()
         {
-           return _auctionNetModel.AuctionHistory.ToList();
+            var test = _auctionNetModel.AuctionHistory.ToList();
+            var testa = test.GroupBy(x => x.CustomerName)
+                .ToDictionary(k => k.Key,
+                    k => test.Where(x => x.CustomerName == k.Key).Select(f => f.EndPrice).Aggregate((y, c) => y + c)).ToList();
+
+            return testa;
         }
     }
 }
