@@ -11,6 +11,11 @@ namespace AuctionNet.Controllers
     public class SupplierController : ISupplierController
     {
         private AuctionNetModel _auctionNetModel;
+
+        public SupplierController()
+        {
+            _auctionNetModel = new AuctionNetModel();
+        }
         public void ValidateInput()
         {
             throw new NotImplementedException();
