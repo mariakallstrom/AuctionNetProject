@@ -39,6 +39,7 @@ Description NVARCHAR(200) NOT NULL,
 StartPrice DECIMAL NOT NULL,
 Commission DECIMAL(5,2) NOT NULL,
 SupplierId INT NOT NULL,
+Picture VARBINARY(MAX),
 CONSTRAINT FK_Product_Supplier FOREIGN KEY (SupplierId) REFERENCES Suppliers(Id)
 );
 
