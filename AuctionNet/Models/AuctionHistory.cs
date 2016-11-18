@@ -1,3 +1,5 @@
+using AuctionNet.Models;
+
 namespace AuctionNet
 {
     using System;
@@ -27,6 +29,12 @@ namespace AuctionNet
 
         public decimal StartPrice { get; set; }
 
+        public DateTime EndDate { get; set; }
+
+        public Decimal Commission { get; set; }
+
         public decimal EndPrice { get; set; }
+
+        public static List<Auctions> Auctions { get; set; }
     }
 }

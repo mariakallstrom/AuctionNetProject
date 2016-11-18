@@ -37,5 +37,7 @@ namespace AuctionNet.Controllers
         {
             return _auctionNetModel.Products.ToList();
         }
+
+
     }
 }

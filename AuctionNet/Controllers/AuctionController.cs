@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -35,6 +36,37 @@ namespace AuctionNet.Controllers
             _auctionNetModel.SaveChanges();
             MessageBox.Show(@"En Auktion har lagts till");
         }
+
+        public string OrderSales()
+        { 
+             var monthlyCommission = _auctionNetModel.AuctionHistory.ToList();
+        var testa = monthlyCommission.GroupBy(x => x.CustomerName)
+            .ToDictionary(k => k.Key,
+                k => monthlyCommission.Where(x => x.CustomerName == k.Key).Select(f => f.EndPrice).Aggregate((y, c) => y + c)).ToList();
+
+            return testa;
+        }
+        //{
+        //    var list = new List<string>();
+        //    var query = from auctionHistory in _auctionNetModel.AuctionHistory
+        //                group auctionHistory by auctionHistory.EndDate.Month
+        //                into groupDate
+
+        //                select new
+        //                {
+        //                    Month = groupDate.Key,
+        //                    Saletotal = groupDate.Sum(AuctionHistory)
+
+        //                };
+        //    foreach (var q in query)
+        //    {
+        //        var report = $"Month: {CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(q.Month)} - Total Sales: {q.Saletotal}";
+        //        list.Add(report);
+        //    }
+
+        //    return String.Join("\n", list);
+        //}
+
 
         public List<Auctions> GetAllAuctions()
         {
