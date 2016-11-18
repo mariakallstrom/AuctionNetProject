@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using AuctionNet.Forms;
 using AuctionNet.Interfaces;
 
@@ -38,7 +39,30 @@ namespace AuctionNet.Controllers
 
         public List<AuctionHistory> GetAllBuyers()
         {
+            var test = _auctionNetModel.AuctionHistory.ToList();
+
+            var k =
+                test.Distinct()
+                    .Select(
+                        x =>
+                            new
+                            {
+                                Namn = x.CustomerName,
+                                Total =
+                                    test.Where(p => p.CustomerName == x.CustomerName)
+                                        .Select(f => f.EndPrice)
+                                        .Aggregate((y, l) => y + l)
+                            });
+
+            foreach (var person in k)
+            {
+                MessageBox.Show(person.Namn + " " + person.Total);
+            }
+
+
            return _auctionNetModel.AuctionHistory.ToList();
+
+        
         }
     }
 }

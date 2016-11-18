@@ -63,8 +63,8 @@ namespace AuctionNet.Forms
 
         private void AddPicture_Click(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
             {
                 string file = openFileDialog1.FileName;
                 try

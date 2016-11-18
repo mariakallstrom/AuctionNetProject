@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AuctionNet.Controllers;
 
 namespace AuctionNet.Forms
 {
@@ -15,6 +16,12 @@ namespace AuctionNet.Forms
         public FrmCustomerList()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CustomerController k = new CustomerController();
+            k.GetAllBuyers();
         }
     }
 }
