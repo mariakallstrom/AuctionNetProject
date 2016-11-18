@@ -1,8 +1,8 @@
 USE AuctionNet
 GO
 
---Fråga 1
---Registrera en produkt.
+----Fråga 1
+----Registrera en produkt.
 
 --CREATE PROCEDURE AddProduct
 --@ProductName NVARCHAR(50),
@@ -22,9 +22,9 @@ GO
 --EXEC AddProduct 'Gammal väska','Röd läderväska från Michael Kors',4500,0.12,1
 
 
---Fråga 2
---Skapa en auktion utifrån en viss produkt där man kan sätta utgångspris,
---acceptpris samt start och slutdatum för auktionen.
+----Fråga 2
+----Skapa en auktion utifrån en viss produkt där man kan sätta utgångspris,
+----acceptpris samt start och slutdatum för auktionen.
 
 --CREATE PROCEDURE AddAuction
 --@AcceptPrice DECIMAL(18,0),
@@ -48,9 +48,9 @@ GO
 --SELECT * FROM Auctions
 
 
---Fråga 3
---Lista pågående auk-oner samt kunna se det högsta budet och vilken kund
---som lagt det.
+----Fråga 3
+----Lista pågående auk-oner samt kunna se det högsta budet och vilken kund
+----som lagt det.
 
 --CREATE VIEW MaxBid
 --AS
@@ -68,8 +68,8 @@ GO
 --having (Max(Bids.bid) = MaxBid.MaxBid)
 
 
---Fråga 4
---Se budhistoriken på en viss auk-on, samt vilka kunder som lagt buden.
+----Fråga 4
+----Se budhistoriken på en viss auk-on, samt vilka kunder som lagt buden.
 
 --CREATE PROCEDURE ViewBids (@AuctionId INT)
 --AS
@@ -89,9 +89,9 @@ GO
 --EXEC ViewBids 1
 
 
---Fråga 5
---Vilka auktioner avslutas under ett visst datumintervall? Samt vad blir
---provisionen för varje auk-on inom det intervallet? 
+----Fråga 5
+----Vilka auktioner avslutas under ett visst datumintervall? Samt vad blir
+----provisionen för varje auk-on inom det intervallet? 
 
 --CREATE PROCEDURE ViewCommission(@Fromdate Datetime, @ToDate DateTime)
 --AS
@@ -110,8 +110,8 @@ GO
 --EXEC ViewCommission '2016.05.12','2016.11.26'
 
 
---Fråga 8
---Visa en kundlista på alla kunder som köpt något, samt vad deras totala ordervärde är.
+----Fråga 8
+----Visa en kundlista på alla kunder som köpt något, samt vad deras totala ordervärde är.
 
 --CREATE VIEW CustomerTotalOrderValue
 --AS
@@ -120,8 +120,8 @@ GO
 --GROUP BY CustomerName
 
 
---Fråga 9
---Vad den totala provisionen är per månad.
+----Fråga 9
+----Vad den totala provisionen är per månad.
 
 --CREATE VIEW CommissionMonth
 --AS
@@ -130,10 +130,20 @@ GO
 --GROUP BY EndDate
 
 
+----Trigger
+
+--CREATE TRIGGER NewBid ON Bids 
+--AFTER INSERT
+--AS
+--DECLARE
+--   @SendNewBid int,
+--   @BidSend Nvarchar(50),
+--   @PrintMessage nvarchar(100)
+
+--   SET @SendNewBid = (SELECT max(Id) FROM Bids)
+--   SET @BidSend = convert(nvarchar(10), @SendNewBid)
+--   SET @PrintMessage = N'Det har lagts till ett bud, se bud id'+@BidSend +N'.';
+
+--   PRINT @PrintMessage 
 
 
-
-
-SELECT * FROM AuctionHistory
-
-SELECT * FROM Auctions
