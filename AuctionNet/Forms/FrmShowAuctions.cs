@@ -64,12 +64,22 @@ namespace AuctionNet.Forms
         {
             List<Bids> bids = new List<Bids>();
             Image test;
+            int auctionId = int.Parse(dgvAllAuction.SelectedCells[0].AccessibilityObject.Value);
             try
             {
-                int auctionId = int.Parse(dgvAllAuction.SelectedCells[0].AccessibilityObject.Value);
-                bids =
-                    _bidController.GetAllBids()
-                        .Where(x => x.AuctionId == auctionId).ToList();
+                            bids =
+                _bidController.GetAllBids()
+                    .Where(x => x.AuctionId == auctionId).ToList();
+                var data = _bidController.GetAllBids().Where(x => x.AuctionId == auctionId).Select(x => new { Name = _customerController.GetAllCustomers().Where(k => k.Id == x.CustomerId).Select(k => k.Name).Single(), Bud = x.Bid, Datum = x.Date.ToShortDateString() }).ToList();
+                bidHistory.DataSource = data;
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bids was not loaded");
+            }
+            try
+            {
 
                 var productId =
                     _auctionController.GetAllAuctions().Where(x => x.Id == auctionId).Select(x => x.ProductId).Single();
@@ -77,14 +87,11 @@ namespace AuctionNet.Forms
                 var pictureBytes = _productController.GetAllProducts().Where(x => x.Id == productId).Select(x => x.Picture).Single();
                 Image newPic = (Bitmap)((new ImageConverter()).ConvertFrom(pictureBytes));
 
-                var data = _bidController.GetAllBids().Where(x => x.AuctionId == auctionId).Select(x=> new {Name = _customerController.GetAllCustomers().Where(k=> k.Id == x.CustomerId).Select(k=> k.Name).Single(), Bud = x.Bid, Datum = x.Date.ToShortDateString()}).ToList();
-
-                bidHistory.DataSource = data;
                 pictureBox1.Image = newPic;
             }
             catch (Exception)
             {
-                MessageBox.Show("Error!");
+                MessageBox.Show("Image was not loaded");
             }
         }
     }

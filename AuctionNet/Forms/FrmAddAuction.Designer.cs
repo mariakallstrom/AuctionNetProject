@@ -45,11 +45,15 @@
             this.auctionNetDataSet = new AuctionNet.AuctionNetDataSet();
             this.productsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productsTableAdapter1 = new AuctionNet.AuctionNetDataSetTableAdapters.ProductsTableAdapter();
+            this.productsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.auctionNetDataSet1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.auctionNetDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auctionNetDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auctionNetDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auctionNetDataSet1BindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblStartTime
@@ -165,6 +169,16 @@
             // 
             this.productsTableAdapter1.ClearBeforeFill = true;
             // 
+            // productsBindingSource2
+            // 
+            this.productsBindingSource2.DataMember = "Products";
+            this.productsBindingSource2.DataSource = this.auctionNetDataSet1;
+            // 
+            // auctionNetDataSet1BindingSource1
+            // 
+            this.auctionNetDataSet1BindingSource1.DataSource = this.auctionNetDataSet1;
+            this.auctionNetDataSet1BindingSource1.Position = 0;
+            // 
             // FrmAddAuction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -189,6 +203,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auctionNetDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auctionNetDataSet1BindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +228,7 @@
         private AuctionNetDataSet auctionNetDataSet;
         private System.Windows.Forms.BindingSource productsBindingSource1;
         private AuctionNetDataSetTableAdapters.ProductsTableAdapter productsTableAdapter1;
+        private System.Windows.Forms.BindingSource auctionNetDataSet1BindingSource1;
+        private System.Windows.Forms.BindingSource productsBindingSource2;
     }
 }
