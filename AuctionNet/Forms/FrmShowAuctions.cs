@@ -4,18 +4,26 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AuctionNet.Interfaces;
 
 namespace AuctionNet.Forms
 {
     public partial class FrmShowAuctions : Form
     {
         private readonly AuctionController _auctionController;
+        private readonly IBidController _bidController;
+        private readonly IProductController _productController;
+        private readonly ICustomerController _customerController;
         public FrmShowAuctions()
         {
+            _bidController = new BidController();
+            _productController = new ProductContoller();
+            _customerController = new CustomerController();
             InitializeComponent();
             _auctionController = new AuctionController();
         
@@ -45,6 +53,39 @@ namespace AuctionNet.Forms
             dgvAllAuction.BackgroundColor = Color.White;
             dgvAllAuction.RowHeadersVisible = false;
             dgvAllAuction.DataSource = auctions;
+        }
+
+        private void dgvAllAuction_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<Bids> bids = new List<Bids>();
+            Image test;
+            try
+            {
+                int auctionId = int.Parse(dgvAllAuction.SelectedCells[0].AccessibilityObject.Value);
+                bids =
+                    _bidController.GetAllBids()
+                        .Where(x => x.AuctionId == auctionId).ToList();
+
+                var productId =
+                    _auctionController.GetAllAuctions().Where(x => x.Id == auctionId).Select(x => x.ProductId).Single();
+
+                var pictureBytes = _productController.GetAllProducts().Where(x => x.Id == productId).Select(x => x.Picture).Single();
+                Image newPic = (Bitmap)((new ImageConverter()).ConvertFrom(pictureBytes));
+
+                var data = _bidController.GetAllBids().Where(x => x.AuctionId == auctionId).Select(x=> new {Name = _customerController.GetAllCustomers().Where(k=> k.Id == x.CustomerId).Select(k=> k.Name).Single(), Bud = x.Bid, Datum = x.Date.ToShortDateString()}).ToList();
+
+                bidHistory.DataSource = data;
+                pictureBox1.Image = newPic;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error!");
+            }
         }
     }
 }

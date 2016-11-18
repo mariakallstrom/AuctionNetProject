@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listViewBidHistory = new System.Windows.Forms.ListView();
             this.lblBidHistory = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CalendarView = new System.Windows.Forms.MonthCalendar();
@@ -37,17 +36,13 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnGet = new System.Windows.Forms.Button();
             this.btnShowAll = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bidHistory = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAuction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bidHistory)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listViewBidHistory
-            // 
-            this.listViewBidHistory.Location = new System.Drawing.Point(567, 351);
-            this.listViewBidHistory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listViewBidHistory.Name = "listViewBidHistory";
-            this.listViewBidHistory.Size = new System.Drawing.Size(291, 223);
-            this.listViewBidHistory.TabIndex = 1;
-            this.listViewBidHistory.UseCompatibleStateImageBehavior = false;
             // 
             // lblBidHistory
             // 
@@ -89,10 +84,12 @@
             this.dgvAllAuction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllAuction.Location = new System.Drawing.Point(34, 24);
             this.dgvAllAuction.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvAllAuction.MultiSelect = false;
             this.dgvAllAuction.Name = "dgvAllAuction";
             this.dgvAllAuction.RowTemplate.Height = 24;
             this.dgvAllAuction.Size = new System.Drawing.Size(929, 204);
             this.dgvAllAuction.TabIndex = 8;
+            this.dgvAllAuction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllAuction_CellContentClick);
             // 
             // btnBack
             // 
@@ -124,11 +121,42 @@
             this.btnShowAll.UseVisualStyleBackColor = true;
             this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(893, 351);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(239, 223);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(567, 602);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(291, 42);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Visa historik och bild";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // bidHistory
+            // 
+            this.bidHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bidHistory.Location = new System.Drawing.Point(567, 340);
+            this.bidHistory.Name = "bidHistory";
+            this.bidHistory.RowTemplate.Height = 28;
+            this.bidHistory.Size = new System.Drawing.Size(283, 234);
+            this.bidHistory.TabIndex = 14;
+            // 
             // FrmShowAuctions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 656);
+            this.ClientSize = new System.Drawing.Size(1183, 656);
+            this.Controls.Add(this.bidHistory);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnShowAll);
             this.Controls.Add(this.btnGet);
             this.Controls.Add(this.btnBack);
@@ -137,20 +165,20 @@
             this.Controls.Add(this.CalendarView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblBidHistory);
-            this.Controls.Add(this.listViewBidHistory);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmShowAuctions";
             this.Text = "Pågående Auktioner";
             this.Load += new System.EventHandler(this.FrmShowAuctions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAuction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bidHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ListView listViewBidHistory;
         private System.Windows.Forms.Label lblBidHistory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MonthCalendar CalendarView;
@@ -159,5 +187,8 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnGet;
         private System.Windows.Forms.Button btnShowAll;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView bidHistory;
     }
 }

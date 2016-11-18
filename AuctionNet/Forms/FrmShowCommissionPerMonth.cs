@@ -23,8 +23,18 @@ namespace AuctionNet.Forms
 
         private void FrmShowCommissionPerMonth_Load(object sender, EventArgs e)
         {
-           dataGridView1.DataSource = _auctionController.GetAuctionsViewCommission();
-           
+
+            var a = _auctionController.GetAuctionsViewCommission().
+                GroupBy(x => new {x.EndDate.Year, x.EndDate.Month}).
+                Select(z => new
+                {
+                    Year = z.FirstOrDefault().EndDate.Year,
+                    Month = z.FirstOrDefault().EndDate.Month,
+                    Commission = z.Sum(r => r.EndPrice) * z.FirstOrDefault().Commission
+                }).ToList();
+
+
+            dataGridView1.DataSource = a;
 
         }
     }

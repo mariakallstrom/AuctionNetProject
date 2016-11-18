@@ -28,5 +28,8 @@ namespace AuctionNet
         public decimal StartPrice { get; set; }
 
         public decimal EndPrice { get; set; }
+
+        public DateTime EndDate { get; set; }
+        public Decimal Commission { get; set; }
     }
 }

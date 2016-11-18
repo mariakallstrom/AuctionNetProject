@@ -111,7 +111,7 @@
             this.btnShowAllCustomers.Name = "btnShowAllCustomers";
             this.btnShowAllCustomers.Size = new System.Drawing.Size(306, 48);
             this.btnShowAllCustomers.TabIndex = 6;
-            this.btnShowAllCustomers.Text = "Visa alla kunder";
+            this.btnShowAllCustomers.Text = "Visa alla kunder som köpt något";
             this.btnShowAllCustomers.UseVisualStyleBackColor = true;
             this.btnShowAllCustomers.Click += new System.EventHandler(this.btnShowAllCustomers_Click);
             // 
