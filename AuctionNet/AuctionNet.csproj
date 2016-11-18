@@ -68,6 +68,7 @@
       <DependentUpon>AuctionNetDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AuctionController.cs" />
+    <Compile Include="Controllers\BidController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\ProductContoller.cs" />
     <Compile Include="Controllers\SupplierController.cs" />

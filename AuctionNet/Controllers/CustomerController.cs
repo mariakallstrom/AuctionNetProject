@@ -21,6 +21,7 @@ namespace AuctionNet.Controllers
 
         public void AddCustomer()
         {
+
             Customers customer = new Customers
             {
                 Name = FrmAddCustomer.Formcust.txtCustomerName.Text,

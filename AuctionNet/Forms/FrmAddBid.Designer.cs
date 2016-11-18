@@ -115,6 +115,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmAddBid";
             this.Text = "Lägg till Bud";
+            this.Load += new System.EventHandler(this.FrmAddBid_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
