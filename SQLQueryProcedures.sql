@@ -132,18 +132,24 @@ GO
 
 ----Trigger
 
---CREATE TRIGGER NewBid ON Bids 
---AFTER INSERT
+--CREATE TRIGGER trgBidInsert ON Bids
+--FOR INSERT
 --AS
---DECLARE
---   @SendNewBid int,
---   @BidSend Nvarchar(50),
---   @PrintMessage nvarchar(100)
+-- DECLARE @bid DECIMAL
+-- DECLARE @CustomerID INT
+-- DECLARE @bidid INT
+-- DECLARE @productID INT
+-- DECLARE @AuctionId INT
+-- DECLARE @AcceptPrice INT
 
---   SET @SendNewBid = (SELECT max(Id) FROM Bids)
---   SET @BidSend = convert(nvarchar(10), @SendNewBid)
---   SET @PrintMessage = N'Det har lagts till ett bud, se bud id'+@BidSend +N'.';
-
---   PRINT @PrintMessage 
-
-
+-- SELECT @bid = d.bid FROM INSERTED d
+-- SELECT @CustomerID = d.CustomerId FROM inserted d
+-- SELECT @AuctionId = d.AuctionId FROM inserted d
+-- SELECT @productID = (SELECT ProductId from Auctions WHERE Id = @AuctionId)
+-- SELECT @AcceptPrice = (SELECT AcceptPrice FROM Auctions WHERE Id = @AuctionId)
+-- IF(@bid >= @AcceptPrice)
+-- BEGIN
+-- UPDATE Auctions
+-- SET EndTime = GETDATE()
+-- WHERE id = @AuctionId
+-- END
