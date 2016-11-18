@@ -38,7 +38,10 @@ namespace AuctionNet.Controllers
 
         public List<Auctions> GetAllAuctions()
         {
-            return _auctionNetModel.Auctions.ToList();
+           return _auctionNetModel.Auctions.ToList();
+            
+
+  
         }
 
         public List<MaxBid> GetAuctionsHighestBids()

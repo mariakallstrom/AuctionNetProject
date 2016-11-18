@@ -43,16 +43,14 @@ namespace AuctionNet.Forms
 
         private void btnGet_Click(object sender, EventArgs e)
         {
-            dgvAllAuction.DataSource = _auctionController.GetAuctionsFromDate(CalendarView.SelectionStart.Date, CalendarView.SelectionEnd.Date);
+           var auctions = _auctionController.GetAuctionsFromDate(CalendarView.SelectionStart.Date, CalendarView.SelectionEnd.Date);
+            dgvAllAuction.DataSource = auctions.Select(x => new { AuctionId = x.Id, Name = x.Products.ProductName.ToString(), AcceptPris = x.AcceptPrice, Startdatum = x.StartTime, SlutDatum = x.EndTime }).ToList();
         }
 
         private void btnShowAll_Click(object sender, EventArgs e)
         {
             var auctions = _auctionController.GetAllAuctions();
-            dgvAllAuction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvAllAuction.BackgroundColor = Color.White;
-            dgvAllAuction.RowHeadersVisible = false;
-            dgvAllAuction.DataSource = auctions;
+            dgvAllAuction.DataSource = auctions.Select(x => new { AuctionId = x.Id , Name = x.Products.ProductName.ToString(), AcceptPris = x.AcceptPrice, Startdatum = x.StartTime, SlutDatum = x.EndTime }).ToList();
         }
 
         private void dgvAllAuction_CellContentClick(object sender, DataGridViewCellEventArgs e)
