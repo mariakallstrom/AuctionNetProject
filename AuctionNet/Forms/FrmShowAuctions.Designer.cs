@@ -47,7 +47,7 @@
             // lblBidHistory
             // 
             this.lblBidHistory.AutoSize = true;
-            this.lblBidHistory.Location = new System.Drawing.Point(551, 299);
+            this.lblBidHistory.Location = new System.Drawing.Point(565, 289);
             this.lblBidHistory.Name = "lblBidHistory";
             this.lblBidHistory.Size = new System.Drawing.Size(88, 20);
             this.lblBidHistory.TabIndex = 2;
@@ -89,7 +89,7 @@
             this.dgvAllAuction.RowTemplate.Height = 24;
             this.dgvAllAuction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAllAuction.ShowEditingIcon = false;
-            this.dgvAllAuction.Size = new System.Drawing.Size(981, 204);
+            this.dgvAllAuction.Size = new System.Drawing.Size(832, 204);
             this.dgvAllAuction.TabIndex = 8;
             this.dgvAllAuction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllAuction_CellContentClick);
             // 
@@ -105,17 +105,17 @@
             // 
             // btnGet
             // 
-            this.btnGet.Location = new System.Drawing.Point(203, 275);
+            this.btnGet.Location = new System.Drawing.Point(206, 577);
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(127, 49);
             this.btnGet.TabIndex = 10;
-            this.btnGet.Text = "Hämta";
+            this.btnGet.Text = "Visa";
             this.btnGet.UseVisualStyleBackColor = true;
             this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
             // 
             // btnShowAll
             // 
-            this.btnShowAll.Location = new System.Drawing.Point(734, 235);
+            this.btnShowAll.Location = new System.Drawing.Point(585, 235);
             this.btnShowAll.Name = "btnShowAll";
             this.btnShowAll.Size = new System.Drawing.Size(281, 40);
             this.btnShowAll.TabIndex = 11;
@@ -125,7 +125,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(881, 340);
+            this.pictureBox1.Location = new System.Drawing.Point(867, 336);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(239, 223);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +134,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(478, 577);
+            this.button1.Location = new System.Drawing.Point(486, 576);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(294, 50);
             this.button1.TabIndex = 13;
@@ -145,10 +145,10 @@
             // bidHistory
             // 
             this.bidHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bidHistory.Location = new System.Drawing.Point(364, 322);
+            this.bidHistory.Location = new System.Drawing.Point(375, 322);
             this.bidHistory.Name = "bidHistory";
             this.bidHistory.RowTemplate.Height = 28;
-            this.bidHistory.Size = new System.Drawing.Size(485, 249);
+            this.bidHistory.Size = new System.Drawing.Size(472, 249);
             this.bidHistory.TabIndex = 14;
             // 
             // FrmShowAuctions

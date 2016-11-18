@@ -35,11 +35,11 @@ namespace AuctionNet.Forms
 
             if (result.Count > 0)
             {
-                MessageBox.Show("Bid was not added");
+                MessageBox.Show("Budet gick inte att lägga");
             }
             else
             {
-                MessageBox.Show("Bid was added!");
+                MessageBox.Show("Budet är lagt");
             }
         }
 

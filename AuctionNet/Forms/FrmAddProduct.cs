@@ -56,7 +56,7 @@ namespace AuctionNet.Forms
                 }
                 else
                 {
-                MessageBox.Show("New product is added!");
+                MessageBox.Show("Ny produkten är inlagd");
                 }
             
         }
@@ -73,7 +73,7 @@ namespace AuctionNet.Forms
                 }
                 catch (IOException)
                 {
-                    MessageBox.Show("Image could not be read.");
+                    MessageBox.Show("Bilden gick inte att läsa in.");
                 }
             }
         }

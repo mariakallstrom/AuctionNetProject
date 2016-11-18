@@ -35,12 +35,12 @@ namespace AuctionNet.Forms
 
             if (result.Count > 0)
             {
-                MessageBox.Show(string.Join(Environment.NewLine, result), "An error was found", MessageBoxButtons.OK,
+                MessageBox.Show(string.Join(Environment.NewLine, result), "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("A new supplier has been saved!");
+                MessageBox.Show("Ny Leverantör är sparad");
                 //Clear();
                 //FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
                 //f.Show();
