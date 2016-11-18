@@ -46,15 +46,15 @@ namespace AuctionNet.Controllers
             return _auctionNetModel.MaxBid.ToList(); 
         }
 
-        public List<Auctions> GetAuctionsesFromDate(DateTime start, DateTime end)
-        {
-            throw new NotImplementedException();
+       public List<Auctions> GetAuctionsFromDate(DateTime start, DateTime end)
+       {
+           return _auctionNetModel.Auctions.Where(x => x.StartTime >= start && x.EndTime <= end).Select(a=>a).ToList();
+       }
 
+       public List<AuctionHistory> GetAuctionsViewCommission()
+        {
+            return _auctionNetModel.AuctionHistory.ToList();
         }
 
-        public List<object> GetAuctionsViewCommission(DateTime start, DateTime end)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

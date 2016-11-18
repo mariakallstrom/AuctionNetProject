@@ -89,7 +89,7 @@
             this.btnViewCurrentAuctions.Name = "btnViewCurrentAuctions";
             this.btnViewCurrentAuctions.Size = new System.Drawing.Size(306, 48);
             this.btnViewCurrentAuctions.TabIndex = 4;
-            this.btnViewCurrentAuctions.Text = "Visa pågående auktioner";
+            this.btnViewCurrentAuctions.Text = "Visa auktioner";
             this.btnViewCurrentAuctions.UseVisualStyleBackColor = true;
             this.btnViewCurrentAuctions.Click += new System.EventHandler(this.btnViewCurrentAuctions_Click);
             // 

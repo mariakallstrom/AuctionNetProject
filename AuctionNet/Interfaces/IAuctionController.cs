@@ -16,9 +16,9 @@ namespace AuctionNet.Interfaces
 
         List<MaxBid> GetAuctionsHighestBids();
 
-        List<Auctions> GetAuctionsesFromDate(DateTime start, DateTime end);
+        List<Auctions> GetAuctionsFromDate(DateTime start, DateTime end);
 
-        List<object> GetAuctionsViewCommission(DateTime start, DateTime end);
+        List<AuctionHistory> GetAuctionsViewCommission();
 
 
     }

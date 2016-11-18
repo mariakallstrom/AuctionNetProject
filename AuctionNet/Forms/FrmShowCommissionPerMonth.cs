@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AuctionNet.Controllers;
 
 namespace AuctionNet.Forms
 {
     public partial class FrmShowCommissionPerMonth : Form
     {
+        private readonly AuctionController _auctionController;
         public FrmShowCommissionPerMonth()
         {
+            _auctionController = new AuctionController();
             InitializeComponent();
+          
+        }
+
+        private void FrmShowCommissionPerMonth_Load(object sender, EventArgs e)
+        {
+           dataGridView1.DataSource = _auctionController.GetAuctionsViewCommission();
+           
+
         }
     }
 }
