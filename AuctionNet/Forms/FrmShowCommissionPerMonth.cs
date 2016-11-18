@@ -37,5 +37,10 @@ namespace AuctionNet.Forms
             dataGridView1.DataSource = a;
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
