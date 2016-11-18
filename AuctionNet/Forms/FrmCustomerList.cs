@@ -13,15 +13,20 @@ namespace AuctionNet.Forms
 {
     public partial class FrmCustomerList : Form
     {
+        private CustomerController _customerController;
         public FrmCustomerList()
         {
+            _customerController = new CustomerController();
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FrmCustomerList_Load(object sender, EventArgs e)
         {
-            CustomerController k = new CustomerController();
-            k.GetAllBuyers();
+            var customers = _customerController.GetAllBuyers();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.BackColor = Color.White;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.DataSource = customers;
         }
     }
 }

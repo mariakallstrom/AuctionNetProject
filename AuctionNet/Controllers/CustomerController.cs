@@ -37,32 +37,20 @@ namespace AuctionNet.Controllers
 
         }
 
-        public List<AuctionHistory> GetAllBuyers()
+        public List<KeyValuePair<string, decimal>> GetAllBuyers()
         {
-            var test = _auctionNetModel.AuctionHistory.ToList();
+            var all = _auctionNetModel.AuctionHistory.ToList();
 
-            var k =
-                test.Distinct()
-                    .Select(
-                        x =>
-                            new
-                            {
-                                Namn = x.CustomerName,
-                                Total =
-                                    test.Where(p => p.CustomerName == x.CustomerName)
-                                        .Select(f => f.EndPrice)
-                                        .Aggregate((y, l) => y + l)
-                            });
-
-            foreach (var person in k)
-            {
-                MessageBox.Show(person.Namn + " " + person.Total);
-            }
+            var buyers =
+                all.GroupBy(x => x.CustomerName)
+                    .ToDictionary(k => k.Key,
+                        k => all.Where(x => x.CustomerName == k.Key).Select(f => f.EndPrice).Aggregate((y, c) => y + c))
+                    .ToList();
 
 
-           return _auctionNetModel.AuctionHistory.ToList();
+            return buyers;
 
-        
+
         }
     }
 }

@@ -27,56 +27,56 @@ namespace AuctionNet
         {
             FrmAddProduct frmAddProduct = new FrmAddProduct();
             frmAddProduct.Show();
-            Hide();
+            //Hide();
         }
 
         private void btnAddSupplier_Click(object sender, EventArgs e)
         {
             FrmAddSupplier frmAddSupplier = new FrmAddSupplier();
             frmAddSupplier.Show();
-            Hide();
+            //Hide();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             FrmAddCustomer frmAddCustomer = new FrmAddCustomer();
             frmAddCustomer.Show();
-            Hide();
+            //Hide();
         }
 
         private void btnAddAuction_Click(object sender, EventArgs e)
         {
             FrmAddAuction frmAddAuction = new FrmAddAuction();
             frmAddAuction.Show();
-            Hide();
+            //Hide();
         }
 
         private void btnAddBid_Click(object sender, EventArgs e)
         {
             FrmAddBid frmAddBid = new FrmAddBid();
             frmAddBid.Show();
-            Hide();
+            //Hide();
         }
 
         private void btnShowAllCustomers_Click(object sender, EventArgs e)
         {
             FrmCustomerList frmCustomerList = new FrmCustomerList();
             frmCustomerList.Show();
-            Hide();
+            //Hide();
         }
 
         private void btnShowMonthlyCommission_Click(object sender, EventArgs e)
         {
             FrmShowCommissionPerMonth frmCommissionPerMonth = new FrmShowCommissionPerMonth();
             frmCommissionPerMonth.Show();
-            Hide();
+            //Hide();
         }
 
         private void btnViewCurrentAuctions_Click(object sender, EventArgs e)
         {
             FrmShowAuctions frmShowAuctions = new FrmShowAuctions();
             frmShowAuctions.Show();
-            Hide();
+            //Hide();
         }
 
         private void FrmAuctionNetStartPage_Load(object sender, EventArgs e)

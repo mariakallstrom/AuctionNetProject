@@ -41,10 +41,10 @@ namespace AuctionNet.Forms
             else
             {
                 MessageBox.Show("A new supplier has been saved!");
-                Clear();
-                FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
-                f.Show();
-                Hide();
+                //Clear();
+                //FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
+                //f.Show();
+                //Hide();
             }
 
 

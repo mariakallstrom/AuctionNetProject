@@ -32,10 +32,10 @@ namespace AuctionNet.Forms
         private void btnAddAuction_Click(object sender, EventArgs e)
         {
             _auctionController.SaveAuction();
-            Clear();
-            FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
-            f.Show();
-            Hide();
+            //Clear();
+            //FrmAuctionNetStartPage f = new FrmAuctionNetStartPage();
+            //f.Show();
+            //Hide();
         }
 
         public void Clear()

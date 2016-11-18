@@ -37,7 +37,9 @@
             this.lblToDate = new System.Windows.Forms.Label();
             this.dgvAllAuction = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
+            this.productPic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAuction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productPic)).BeginInit();
             this.SuspendLayout();
             // 
             // listViewBidHistory
@@ -104,10 +106,12 @@
             this.dgvAllAuction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllAuction.Location = new System.Drawing.Point(20, 85);
             this.dgvAllAuction.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvAllAuction.MultiSelect = false;
             this.dgvAllAuction.Name = "dgvAllAuction";
             this.dgvAllAuction.RowTemplate.Height = 24;
             this.dgvAllAuction.Size = new System.Drawing.Size(511, 385);
             this.dgvAllAuction.TabIndex = 8;
+            this.dgvAllAuction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllAuction_CellContentClick);
             // 
             // btnBack
             // 
@@ -119,11 +123,20 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // productPic
+            // 
+            this.productPic.Location = new System.Drawing.Point(673, 518);
+            this.productPic.Name = "productPic";
+            this.productPic.Size = new System.Drawing.Size(157, 182);
+            this.productPic.TabIndex = 10;
+            this.productPic.TabStop = false;
+            // 
             // FrmShowAuctions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 884);
+            this.Controls.Add(this.productPic);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvAllAuction);
             this.Controls.Add(this.lblToDate);
@@ -139,6 +152,7 @@
             this.Text = "Pågående Auktioner";
             this.Load += new System.EventHandler(this.FrmShowAuctions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAuction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +168,6 @@
         private System.Windows.Forms.Label lblToDate;
         private System.Windows.Forms.DataGridView dgvAllAuction;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.PictureBox productPic;
     }
 }

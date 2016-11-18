@@ -41,5 +41,10 @@ namespace AuctionNet.Forms
             f.Show();
             Hide();
         }
+
+        private void dgvAllAuction_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show(dgvAllAuction.SelectedCells.ToString());
+        }
     }
 }
